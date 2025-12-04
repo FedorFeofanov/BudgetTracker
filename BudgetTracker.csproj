@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Debt.cs" />
     <Compile Include="DebtEntryForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -64,6 +65,11 @@
     <Compile Include="Registration.Designer.cs">
       <DependentUpon>Registration.cs</DependentUpon>
     </Compile>
+    <Compile Include="Expense.cs" />
+    <Compile Include="Income.cs" />
+    <Compile Include="Loan.cs" />
+    <Compile Include="Receivable.cs" />
+    <Compile Include="Transaction.cs" />
     <Compile Include="TransactionEntryForm.cs">
       <SubType>Form</SubType>
     </Compile>
