@@ -10,21 +10,20 @@ using System.Windows.Forms;
 
 namespace BudgetTracker
 {
-    public partial class Form1 : Form
+    public partial class Registration : Form
     {
-        public Form1()
+        public Registration()
         {
             InitializeComponent();
         }
 
-        private void Login_TextChanged(object sender, EventArgs e)
+        private void button2_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void Login_TextChanged(object sender, EventArgs e)
         {
-            this.Close();
 
         }
     }
