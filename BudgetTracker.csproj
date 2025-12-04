@@ -59,6 +59,12 @@
     <Compile Include="DebtForm.Designer.cs">
       <DependentUpon>DebtForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Registration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Registration.Designer.cs">
+      <DependentUpon>Registration.cs</DependentUpon>
+    </Compile>
     <Compile Include="Expense.cs" />
     <Compile Include="Income.cs" />
     <Compile Include="Loan.cs" />
@@ -89,6 +95,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="DebtForm.resx">
       <DependentUpon>DebtForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Registration.resx">
+      <DependentUpon>Registration.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TransactionEntryForm.resx">
       <DependentUpon>TransactionEntryForm.cs</DependentUpon>
