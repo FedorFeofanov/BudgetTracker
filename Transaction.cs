@@ -8,12 +8,12 @@ namespace BudgetTracker
 {
     public abstract class Transaction
     {
-        private int ID {get; set;}
-        private double Amount {get; set;}
-        private DateTime Date {get; set;}
-        private string Description {get; set;}
-        private string Category {get; set;}
-        private string Currency {get; set;}
+        public int ID {get; set;}
+        public double Amount {get; set;}
+        public DateTime Date {get; set;}
+        public string Description {get; set;}
+        public string Category {get; set;}
+        public string Currency {get; set;}
         public Transaction(int iD, double amount, DateTime date, string description, string category, string currency)
         {
             ID = iD;
