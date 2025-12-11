@@ -40,6 +40,9 @@ namespace BudgetTracker
                 return;
             }
 
+            Form1 form1 = new Form1();
+            form1.Show();
+            this.Close();
             
 
             //User user = new User(login, password); В валидацию накинуть надо еще проверку, нет ли такого объекта в JSON, + добавить добавление 
