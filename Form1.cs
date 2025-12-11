@@ -21,11 +21,22 @@ namespace BudgetTracker
         {
 
         }
-
-        private void button2_Click(object sender, EventArgs e)
+        private void button2_Click(object sender, EventArgs e)//go to register
         {
+            Registration register = new Registration();
+            register.Show();
             this.Close();
 
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)//login
+        {
+            //здесь нужна проверка, существует ли такой аккаунт, который ввели внутри базы.
+
+            MainForm main = new MainForm();
+            main.Show();
+            this.Close();
         }
     }
 }
