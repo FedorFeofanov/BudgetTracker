@@ -8,14 +8,14 @@ namespace BudgetTracker
 {
     public abstract class Debt
     {
-        private int ID;
-        private string LanderName;
-        private double OriginalAmount;
-        private double CurrentBalance;
-        private double InterestRate;
-        private DateTime StartDate;
-        private string DebtType;
-        private string Status;
+        public int ID;
+        public string LanderName;
+        public double OriginalAmount;
+        public double CurrentBalance;
+        public double InterestRate;
+        public DateTime StartDate;
+        public string DebtType;
+        public string Status;
 
         public Debt(int iD, string landerName, double originalAmount, double currentBalance, double interestRate, DateTime startDate, string debtType, string status)
         {

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics.Eventing.Reader;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -23,20 +24,29 @@ namespace BudgetTracker
         }
         private void button2_Click(object sender, EventArgs e)//go to register
         {
-            Registration register = new Registration();
-            register.Show();
+            RegistrationForm register = new RegistrationForm();
+            this.Hide();
+            register.ShowDialog();
             this.Close();
-
-
         }
 
         private void button1_Click(object sender, EventArgs e)//login
         {
-            //здесь нужна проверка, существует ли такой аккаунт, который ввели внутри базы.
-
-            MainForm main = new MainForm();
-            main.Show();
-            this.Close();
+            string login = Login.Text;
+            string password = Password.Text;
+            foreach (User u in DataBase.Users)
+            {
+                if((login == u.Email ||(login == u.Name) && password == u.Password)){
+                    MainForm main = new MainForm();
+                    this.Hide();
+                    main.ShowDialog();
+                    this.Close();
+                    return;
+                }
+            }
+            MessageBox.Show("Incorrect login or password. Try again.", "Login failure!",
+            MessageBoxButtons.OK, MessageBoxIcon.Error);
+            Password.Clear();
         }
     }
 }

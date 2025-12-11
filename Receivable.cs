@@ -8,10 +8,10 @@ namespace BudgetTracker
 {
     public class Receivable: Debt
     {
-        private string BorrowerName { get; set; }
-        private DateTime ExpectedRepaymentDate { get; set; }
-        private bool IsInterestAccruing { get; set; }
-        private double RepaymentCollected { get; set; }
+        public string BorrowerName { get; set; }
+        public DateTime ExpectedRepaymentDate { get; set; }
+        public bool IsInterestAccruing { get; set; }
+        public double RepaymentCollected { get; set; }
         public Receivable(int iD, string landerName, double originalAmount, double currentBalance, double interestRate, DateTime startDate, string debtType, string status, string borrowerName, DateTime expectedRepaymentDate, bool isInterenstAccruing, double repaymentCollected)
             :base(iD, landerName, originalAmount, currentBalance, interestRate, startDate, debtType, status)
         { 
