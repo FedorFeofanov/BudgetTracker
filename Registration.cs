@@ -40,6 +40,8 @@ namespace BudgetTracker
                 return;
             }
 
+            
+
             //User user = new User(login, password); В валидацию накинуть надо еще проверку, нет ли такого объекта в JSON, + добавить добавление 
             // объекта в JSON.
         }

@@ -16,5 +16,19 @@ namespace BudgetTracker
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, EventArgs e)// Go to transaction entry
+        {
+            TransactionEntryForm transaction = new TransactionEntryForm();
+            transaction.Show();
+            this.Close();
+        }
+
+        private void button2_Click(object sender, EventArgs e)// go to debt entry
+        {
+            DebtEntryForm debt = new DebtEntryForm();
+            debt.Show();
+            this.Close();
+        }
     }
 }
