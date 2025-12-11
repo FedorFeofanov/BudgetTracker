@@ -6,15 +6,18 @@ using System.Threading.Tasks;
 
 namespace BudgetTracker
 {
-    public class User
+    internal class User
     {
-       private string login { get; set; }
-       private string password { get; set; }
-        
-        public User(string login, string password)
+        public int Id { get; set; }
+        public string Name { get; set; }
+        public string Email { get; set; }
+        public string Password { get; set; }
+        public User(int id, string name, string email, string password) 
         {
-            this.login = login;
-            this.password = password;
+            Id = id;
+            Name = name;
+            Email = email;
+            Password = password;
         }
 
     }

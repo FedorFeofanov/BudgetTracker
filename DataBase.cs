@@ -7,17 +7,21 @@ namespace BudgetTracker
 {
     internal class DataBase
     {
-        public static Dictionary<int, Receivable> Receivables = new Dictionary<int, Receivable>();
+        public static List<Receivable> Receivables = new List<Receivable>();
         private static readonly string ReceivablesFile = "receivables.json";
 
-        public static Dictionary<int, Loan> Loans = new Dictionary<int, Loan>();
+        public static List<Loan> Loans = new List<Loan>();
         private static readonly string LoansFile = "loans.json";
 
-        public static Dictionary<int, Income> Incomes = new Dictionary<int, Income>();
+        public static List<Income> Incomes = new List<Income>();
         private static readonly string IncomesFile = "incomes.json";
 
-        public static Dictionary<int, Expense> Expenses = new Dictionary<int, Expense>();
+        public static List<Expense> Expenses = new List<Expense>();
         private static readonly string ExpensesFile = "expenses.json";
+
+        public static List<User> Users = new List<User>();
+        private static readonly string UsersFile = "users.json";
+
 
         static DataBase()
         {
@@ -43,10 +47,11 @@ namespace BudgetTracker
 
         public static void LoadAllData()
         {
-            Receivables = Read<Dictionary<int, Receivable>>(ReceivablesFile);
-            Loans = Read<Dictionary<int, Loan>>(LoansFile);
-            Incomes = Read<Dictionary<int, Income>>(IncomesFile);
-            Expenses = Read<Dictionary<int, Expense>>(ExpensesFile);
+            Receivables = Read<List<Receivable>>(ReceivablesFile);
+            Loans = Read<List<Loan>>(LoansFile);
+            Incomes = Read<List<Income>>(IncomesFile);
+            Expenses = Read<List<Expense>>(ExpensesFile);
+            Users = Read<List<User>>(UsersFile);
         }
 
         public static void SaveAllData()
@@ -55,6 +60,7 @@ namespace BudgetTracker
             Save(Loans, LoansFile);
             Save(Incomes, IncomesFile);
             Save(Expenses, ExpensesFile);
+            Save(Users, UsersFile);
         }
     }
 }
