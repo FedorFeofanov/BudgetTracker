@@ -30,19 +30,27 @@
         {
             this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.Amount = new System.Windows.Forms.TextBox();
+            this.Description = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.label3 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
+            this.Category = new System.Windows.Forms.TextBox();
+            this.Currency = new System.Windows.Forms.TextBox();
+            this.Merch = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.Taxable = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // radioButton1
             // 
             this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(147, 33);
+            this.radioButton1.Location = new System.Drawing.Point(80, 82);
             this.radioButton1.Margin = new System.Windows.Forms.Padding(4);
             this.radioButton1.Name = "radioButton1";
             this.radioButton1.Size = new System.Drawing.Size(72, 20);
@@ -55,7 +63,7 @@
             // radioButton2
             // 
             this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(147, 84);
+            this.radioButton2.Location = new System.Drawing.Point(80, 181);
             this.radioButton2.Margin = new System.Windows.Forms.Padding(4);
             this.radioButton2.Name = "radioButton2";
             this.radioButton2.Size = new System.Drawing.Size(81, 20);
@@ -65,27 +73,27 @@
             this.radioButton2.UseVisualStyleBackColor = true;
             this.radioButton2.CheckedChanged += new System.EventHandler(this.radioButton2_CheckedChanged);
             // 
-            // textBox1
+            // Amount
             // 
-            this.textBox1.Location = new System.Drawing.Point(131, 171);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(132, 22);
-            this.textBox1.TabIndex = 2;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.Amount.Location = new System.Drawing.Point(112, 326);
+            this.Amount.Margin = new System.Windows.Forms.Padding(4);
+            this.Amount.Name = "Amount";
+            this.Amount.Size = new System.Drawing.Size(132, 22);
+            this.Amount.TabIndex = 2;
+            this.Amount.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
-            // textBox2
+            // Description
             // 
-            this.textBox2.Location = new System.Drawing.Point(297, 171);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(295, 22);
-            this.textBox2.TabIndex = 3;
+            this.Description.Location = new System.Drawing.Point(279, 326);
+            this.Description.Margin = new System.Windows.Forms.Padding(4);
+            this.Description.Name = "Description";
+            this.Description.Size = new System.Drawing.Size(226, 22);
+            this.Description.TabIndex = 3;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(127, 139);
+            this.label1.Location = new System.Drawing.Point(109, 294);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(52, 16);
@@ -95,7 +103,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(293, 139);
+            this.label2.Location = new System.Drawing.Point(275, 294);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(75, 16);
@@ -104,7 +112,7 @@
             // 
             // dateTimePicker1
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(131, 250);
+            this.dateTimePicker1.Location = new System.Drawing.Point(113, 405);
             this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(4);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(265, 22);
@@ -114,7 +122,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(127, 218);
+            this.label3.Location = new System.Drawing.Point(109, 373);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(85, 16);
@@ -123,7 +131,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(147, 326);
+            this.button1.Location = new System.Drawing.Point(129, 481);
             this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(100, 28);
@@ -132,24 +140,106 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // Category
+            // 
+            this.Category.Location = new System.Drawing.Point(548, 332);
+            this.Category.Margin = new System.Windows.Forms.Padding(4);
+            this.Category.Name = "Category";
+            this.Category.Size = new System.Drawing.Size(181, 22);
+            this.Category.TabIndex = 9;
+            // 
+            // Currency
+            // 
+            this.Currency.Location = new System.Drawing.Point(793, 333);
+            this.Currency.Margin = new System.Windows.Forms.Padding(4);
+            this.Currency.Name = "Currency";
+            this.Currency.Size = new System.Drawing.Size(198, 22);
+            this.Currency.TabIndex = 10;
+            this.Currency.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
+            // 
+            // Merch
+            // 
+            this.Merch.Location = new System.Drawing.Point(210, 181);
+            this.Merch.Margin = new System.Windows.Forms.Padding(4);
+            this.Merch.Name = "Merch";
+            this.Merch.Size = new System.Drawing.Size(295, 22);
+            this.Merch.TabIndex = 11;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(307, 161);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(99, 16);
+            this.label4.TabIndex = 12;
+            this.label4.Text = "Merchant name";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(839, 294);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(60, 16);
+            this.label5.TabIndex = 13;
+            this.label5.Text = "Currency";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(591, 294);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(62, 16);
+            this.label6.TabIndex = 14;
+            this.label6.Text = "Category";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(321, 62);
+            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(57, 16);
+            this.label7.TabIndex = 16;
+            this.label7.Text = "Taxable";
+            // 
+            // Taxable
+            // 
+            this.Taxable.Location = new System.Drawing.Point(201, 82);
+            this.Taxable.Margin = new System.Windows.Forms.Padding(4);
+            this.Taxable.Name = "Taxable";
+            this.Taxable.Size = new System.Drawing.Size(295, 22);
+            this.Taxable.TabIndex = 18;
+            // 
             // TransactionEntryForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(1067, 554);
+            this.Controls.Add(this.Taxable);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.Merch);
+            this.Controls.Add(this.Currency);
+            this.Controls.Add(this.Category);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.Description);
+            this.Controls.Add(this.Amount);
             this.Controls.Add(this.radioButton2);
             this.Controls.Add(this.radioButton1);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "TransactionEntryForm";
             this.Text = "EntryForm";
+            this.Load += new System.EventHandler(this.TransactionEntryForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -159,12 +249,20 @@
 
         private System.Windows.Forms.RadioButton radioButton1;
         private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox Amount;
+        private System.Windows.Forms.TextBox Description;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox Category;
+        private System.Windows.Forms.TextBox Currency;
+        private System.Windows.Forms.TextBox Merch;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox Taxable;
     }
 }
