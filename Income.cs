@@ -8,12 +8,10 @@ namespace BudgetTracker
 {
     public class Income : Transaction
     {
-        public string SourceOfIncome {get; set;}
         public bool Taxable {get; set;}
-        public Income(int iD, double amount, DateTime date, string description, string category, string currency, string sourceOfIncome, bool taxable)
+        public Income(int iD, double amount, DateTime date, string description, string category, string currency, bool taxable)
             : base(iD, amount, date, description, category, currency)
         {
-            SourceOfIncome = sourceOfIncome;
             Taxable = taxable;
         }
     }

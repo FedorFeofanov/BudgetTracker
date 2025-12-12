@@ -27,6 +27,9 @@ namespace BudgetTracker
             StartDate = startDate;
             DebtType = debtType;
             Status = status;
+           
         }
     }
 }
+//everything is fine(⌐■_■)
+
