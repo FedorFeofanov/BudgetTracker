@@ -119,7 +119,7 @@ namespace BudgetTracker
         public static Loan AddNewLoan(string landerName, double originalAmount, double currentBalance, double interestRate, DateTime startDate, string debtType, string status, DateTime dueDate, double minimumPayment, int termInMonths, string paymentFrequency)
         {
             int iD = GetNextIdLoan();
-            Loan loan = new Loan(iD, landerName, originalAmount, currentBalance, interestRate, startDate, debtType, status, dueDate, minimumPayment, termInMonths, paymentFrequency);
+            Loan loan = new Loan(iD, landerName, originalAmount, currentBalance, interestRate, startDate, debtType, status, dueDate, minimumPayment, paymentFrequency);
             Loans.Add(loan);
             SaveAllData();
             return loan;
