@@ -166,10 +166,10 @@ namespace BudgetTracker
             }
             return maxId + 1;
         }
-        public static Income AddNewIncome(double amount, DateTime date, string description, string category, string currency, string sourceOfIncome, bool taxable)
+        public static Income AddNewIncome(double amount, DateTime date, string description, string category, string currency, bool taxable)
         {
             int iD = GetNextIdIncome();
-            Income income = new Income(iD, amount, date, description, category, currency, sourceOfIncome, taxable);
+            Income income = new Income(iD, amount, date, description, category, currency, taxable);
             Incomes.Add(income);
             SaveAllData();
             return income;
