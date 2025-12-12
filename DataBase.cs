@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.IO;
 using System.Linq;
+using System.Net.Mail;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 
@@ -115,6 +116,14 @@ namespace BudgetTracker
             }
             return maxId + 1;
         }
+        public static Loan AddNewLoan(string landerName, double originalAmount, double currentBalance, double interestRate, DateTime startDate, string debtType, string status, DateTime dueDate, double minimumPayment, int termInMonths, string paymentFrequency)
+        {
+            int iD = GetNextIdLoan();
+            Loan loan = new Loan(iD, landerName, originalAmount, currentBalance, interestRate, startDate, debtType, status, dueDate, minimumPayment, termInMonths, paymentFrequency);
+            Loans.Add(loan);
+            SaveAllData();
+            return loan;
+        }
         public static int GetNextIdReceivable()
         {
             if (Receivables == null || Receivables.Count == 0)
@@ -131,6 +140,14 @@ namespace BudgetTracker
                 }
             }
             return maxId + 1;
+        }
+        public static Receivable AddNewReceivable(string landerName, double originalAmount, double currentBalance, double interestRate, DateTime startDate, string debtType, string status, string borrowerName, DateTime expectedRepaymentDate, bool isInterenstAccruing, double repaymentCollected)
+        {
+            int iD = GetNextIdReceivable();
+            Receivable recievable = new Receivable(iD, landerName, originalAmount, currentBalance, interestRate, startDate, debtType, status, borrowerName, expectedRepaymentDate, isInterenstAccruing, repaymentCollected);
+            Receivables.Add(recievable);
+            SaveAllData();
+            return recievable;
         }
         public static int GetNextIdIncome()
         {
@@ -149,6 +166,14 @@ namespace BudgetTracker
             }
             return maxId + 1;
         }
+        public static Income AddNewIncome(double amount, DateTime date, string description, string category, string currency, string sourceOfIncome, bool taxable)
+        {
+            int iD = GetNextIdIncome();
+            Income income = new Income(iD, amount, date, description, category, currency, sourceOfIncome, taxable);
+            Incomes.Add(income);
+            SaveAllData();
+            return income;
+        }
         public static int GetNextIdExpense()
         {
             if (Expenses == null || Expenses.Count == 0)
@@ -165,6 +190,14 @@ namespace BudgetTracker
                 }
             }
             return maxId + 1;
+        }
+        public static Expense AddNewExpense(double amount, DateTime date, string description, string category, string currency, string merchantName)
+        {
+            int iD = GetNextIdExpense();
+            Expense expense = new Expense(iD, amount, date, description, category, currency, merchantName);
+            Expenses.Add(expense);
+            SaveAllData();
+            return expense;
         }
     }
 }

@@ -8,7 +8,7 @@ namespace BudgetTracker
 {
     public class Expense: Transaction
     {
-        private string MerchantName {get; set;}
+        public string MerchantName {get; set;}
         public Expense(int iD, double amount, DateTime date, string description, string category, string currency, string merchantName)
             : base(iD, amount, date, description, category, currency)
         {
