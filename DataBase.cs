@@ -119,7 +119,7 @@ namespace BudgetTracker
         public static Loan AddNewLoan(string landerName, double originalAmount, double currentBalance, double interestRate, DateTime startDate, string debtType, string status, DateTime dueDate, double minimumPayment, int termInMonths, string paymentFrequency)
         {
             int iD = GetNextIdLoan();
-            Loan loan = new Loan(iD, landerName, originalAmount, currentBalance, interestRate, startDate, debtType, status, dueDate, minimumPayment, termInMonths, paymentFrequency);
+            Loan loan = new Loan(iD, landerName, originalAmount, currentBalance, interestRate, startDate, debtType, status, dueDate, minimumPayment, paymentFrequency);
             Loans.Add(loan);
             SaveAllData();
             return loan;
@@ -166,10 +166,10 @@ namespace BudgetTracker
             }
             return maxId + 1;
         }
-        public static Income AddNewIncome(double amount, DateTime date, string description, string category, string currency, string sourceOfIncome, bool taxable)
+        public static Income AddNewIncome(double amount, DateTime date, string description, string category, string currency, bool taxable)
         {
             int iD = GetNextIdIncome();
-            Income income = new Income(iD, amount, date, description, category, currency, sourceOfIncome, taxable);
+            Income income = new Income(iD, amount, date, description, category, currency, taxable);
             Incomes.Add(income);
             SaveAllData();
             return income;
