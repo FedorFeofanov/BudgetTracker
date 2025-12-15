@@ -11,8 +11,8 @@ namespace BudgetTracker
         public DateTime DueDate { get; set; }
         public double MinimumPayment { get; set; }
         public string PaymentFrequency { get; set; }
-        public Loan(int iD, string landerName, double originalAmount, double currentBalance, double interestRate, DateTime startDate, string debtType, string status, DateTime dueDate, double minimumPayment, string paymentFrequency)
-            :base(iD, landerName, originalAmount, currentBalance, interestRate, startDate, debtType, status)
+        public Loan(int iD, string landerName, double originalAmount, double currentBalance, double interestRate, DateTime startDate, string debtType, string status, int UserID, DateTime dueDate, double minimumPayment, string paymentFrequency)
+            :base(iD, landerName, originalAmount, currentBalance, interestRate, startDate, debtType, status, UserID)
         {
             DueDate = dueDate;
             MinimumPayment = minimumPayment;

@@ -38,7 +38,7 @@ namespace BudgetTracker
             foreach (User u in DataBase.Users)
             {
                 if((login == u.Email ||(login == u.Name) && password == u.Password)){
-                    MainForm main = new MainForm();
+                    MainForm main = new MainForm(user: u);
                     this.Hide();
                     main.ShowDialog();
                     this.Close();

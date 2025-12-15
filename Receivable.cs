@@ -11,8 +11,8 @@ namespace BudgetTracker
         public string BorrowerName { get; set; }
         public DateTime ExpectedRepaymentDate { get; set; }
         public double RepaymentCollected { get; set; }
-        public Receivable(int iD, string landerName, double originalAmount, double currentBalance, double interestRate, DateTime startDate, string debtType, string status, string borrowerName, DateTime expectedRepaymentDate, bool isInterenstAccruing, double repaymentCollected)
-            :base(iD, landerName, originalAmount, currentBalance, interestRate, startDate, debtType, status)
+        public Receivable(int iD, string landerName, double originalAmount, double currentBalance, double interestRate, DateTime startDate, string debtType, string status, int UserID, string borrowerName, DateTime expectedRepaymentDate, bool isInterenstAccruing, double repaymentCollected)
+            :base(iD, landerName, originalAmount, currentBalance, interestRate, startDate, debtType, status, UserID)
         { 
             BorrowerName = borrowerName;
             ExpectedRepaymentDate = expectedRepaymentDate;
