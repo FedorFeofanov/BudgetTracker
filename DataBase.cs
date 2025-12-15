@@ -83,7 +83,7 @@ namespace BudgetTracker
             }
             return maxId + 1;
         }
-        public static User AddNewUser(string name, string email, string password)
+        public static User AddNewUser(string name, string email, string password, double currentBalance)
         {
 
             foreach (User u in Users)
@@ -94,7 +94,7 @@ namespace BudgetTracker
                 }
             }
 
-            User user = new User(GetNextIdUser(), name, email, password);
+            User user = new User(id: GetNextIdUser(), name: name, email: email, password: password, currentBalance: currentBalance);
             Users.Add(user);
             SaveAllData();
             return user;
@@ -116,10 +116,10 @@ namespace BudgetTracker
             }
             return maxId + 1;
         }
-        public static Loan AddNewLoan(string landerName, double originalAmount, double currentBalance, double interestRate, DateTime startDate, string debtType, string status, DateTime dueDate, double minimumPayment, int termInMonths, string paymentFrequency)
+        public static Loan AddNewLoan(string landerName, double originalAmount, double currentBalance, double interestRate, DateTime startDate, string debtType, string status, int UserID, DateTime dueDate, double minimumPayment, int termInMonths, string paymentFrequency)
         {
             int iD = GetNextIdLoan();
-            Loan loan = new Loan(iD, landerName, originalAmount, currentBalance, interestRate, startDate, debtType, status, dueDate, minimumPayment, paymentFrequency);
+            Loan loan = new Loan(iD, landerName, originalAmount, currentBalance, interestRate, startDate, debtType, status, UserID, dueDate, minimumPayment, paymentFrequency);
             Loans.Add(loan);
             SaveAllData();
             return loan;
@@ -141,10 +141,10 @@ namespace BudgetTracker
             }
             return maxId + 1;
         }
-        public static Receivable AddNewReceivable(string landerName, double originalAmount, double currentBalance, double interestRate, DateTime startDate, string debtType, string status, string borrowerName, DateTime expectedRepaymentDate, bool isInterenstAccruing, double repaymentCollected)
+        public static Receivable AddNewReceivable(string landerName, double originalAmount, double currentBalance, double interestRate, DateTime startDate, string debtType, string status, int UserID, string borrowerName, DateTime expectedRepaymentDate, bool isInterenstAccruing, double repaymentCollected)
         {
             int iD = GetNextIdReceivable();
-            Receivable recievable = new Receivable(iD, landerName, originalAmount, currentBalance, interestRate, startDate, debtType, status, borrowerName, expectedRepaymentDate, isInterenstAccruing, repaymentCollected);
+            Receivable recievable = new Receivable(iD, landerName, originalAmount, currentBalance, interestRate, startDate, debtType, status, UserID, borrowerName, expectedRepaymentDate, isInterenstAccruing, repaymentCollected);
             Receivables.Add(recievable);
             SaveAllData();
             return recievable;
@@ -166,10 +166,10 @@ namespace BudgetTracker
             }
             return maxId + 1;
         }
-        public static Income AddNewIncome(double amount, DateTime date, string description, string category, string currency, bool taxable)
+        public static Income AddNewIncome(double amount, DateTime date, string description, string category, string currency, int UserID, bool taxable)
         {
             int iD = GetNextIdIncome();
-            Income income = new Income(iD, amount, date, description, category, currency, taxable);
+            Income income = new Income(iD, amount, date, description, category, currency, UserID, taxable);
             Incomes.Add(income);
             SaveAllData();
             return income;
@@ -191,10 +191,10 @@ namespace BudgetTracker
             }
             return maxId + 1;
         }
-        public static Expense AddNewExpense(double amount, DateTime date, string description, string category, string currency, string merchantName)
+        public static Expense AddNewExpense(double amount, DateTime date, string description, string category, string currency, int UserID, string merchantName)
         {
             int iD = GetNextIdExpense();
-            Expense expense = new Expense(iD, amount, date, description, category, currency, merchantName);
+            Expense expense = new Expense(iD, amount, date, description, category, currency, UserID, merchantName);
             Expenses.Add(expense);
             SaveAllData();
             return expense;

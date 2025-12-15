@@ -16,8 +16,9 @@ namespace BudgetTracker
         public DateTime StartDate;
         public string DebtType;
         public string Status;
+        public int UserID;
 
-        public Debt(int iD, string landerName, double originalAmount, double currentBalance, double interestRate, DateTime startDate, string debtType, string status)
+        public Debt(int iD, string landerName, double originalAmount, double currentBalance, double interestRate, DateTime startDate, string debtType, string status, int userID)
         {
             ID = iD;
             LanderName = landerName;
@@ -27,7 +28,7 @@ namespace BudgetTracker
             StartDate = startDate;
             DebtType = debtType;
             Status = status;
-           
+            UserID = userID;
         }
     }
 }
