@@ -19,23 +19,23 @@ namespace BudgetTracker
             InitializeComponent();
         }
 
-       
+
         private void button2_Click(object sender, EventArgs e)
         {
-            
+
             string email = Email.Text;
             if (String.IsNullOrEmpty(email))
             {
-            MessageBox.Show("Email field cannot be empty. Try again.","Critical failure!",
-            MessageBoxButtons.OK,MessageBoxIcon.Error);
-            return;
+                MessageBox.Show("Email field cannot be empty. Try again.", "Critical failure!",
+                MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
             }
-            string name = Name.Text;
+            string name = NameTextBox.Text;
             if (String.IsNullOrEmpty(name))
             {
-            MessageBox.Show("Name field cannot be empty. Try again.","Critical failure!",
-            MessageBoxButtons.OK,MessageBoxIcon.Error);
-            return;
+                MessageBox.Show("Name field cannot be empty. Try again.", "Critical failure!",
+                MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
             }
             string password = Password.Text;
             if (String.IsNullOrEmpty(password))
@@ -44,9 +44,9 @@ namespace BudgetTracker
                 MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
+            double currentBalance = decimal.ToDouble(BalanceNUD.Value);
 
-            User user = DataBase.AddNewUser(email, name, password);
-            MessageBox.Show("User created", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            User user = DataBase.AddNewUser(email: email, name: name, password: password, currentBalance: currentBalance);
             if (user == null)
             {
                 MessageBox.Show("Email is already in use. Try again.", "Registration failure!",
@@ -54,6 +54,7 @@ namespace BudgetTracker
                 return;
 
             }
+            MessageBox.Show("User created", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             Form1 form1 = new Form1();
             this.Hide();

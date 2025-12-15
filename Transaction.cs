@@ -14,7 +14,8 @@ namespace BudgetTracker
         public string Description {get; set;}
         public string Category {get; set;}
         public string Currency {get; set;}
-        public Transaction(int iD, double amount, DateTime date, string description, string category, string currency)
+        public int UserID {get; set;}
+        public Transaction(int iD, double amount, DateTime date, string description, string category, string currency, int userID)
         {
             ID = iD;
             Amount = amount;
@@ -22,6 +23,7 @@ namespace BudgetTracker
             Description = description;
             Category = category;
             Currency = currency;
+            UserID = userID;
         }
     }
 }
