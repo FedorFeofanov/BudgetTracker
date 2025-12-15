@@ -33,8 +33,8 @@
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.Description = new System.Windows.Forms.TextBox();
+            this.Amount = new System.Windows.Forms.TextBox();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.button2 = new System.Windows.Forms.Button();
@@ -89,21 +89,21 @@
             this.label1.TabIndex = 13;
             this.label1.Text = "Amount";
             // 
-            // textBox2
+            // Description
             // 
-            this.textBox2.Location = new System.Drawing.Point(348, 207);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(295, 22);
-            this.textBox2.TabIndex = 12;
+            this.Description.Location = new System.Drawing.Point(348, 207);
+            this.Description.Margin = new System.Windows.Forms.Padding(4);
+            this.Description.Name = "Description";
+            this.Description.Size = new System.Drawing.Size(295, 22);
+            this.Description.TabIndex = 12;
             // 
-            // textBox1
+            // Amount
             // 
-            this.textBox1.Location = new System.Drawing.Point(181, 207);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(132, 22);
-            this.textBox1.TabIndex = 11;
+            this.Amount.Location = new System.Drawing.Point(181, 207);
+            this.Amount.Margin = new System.Windows.Forms.Padding(4);
+            this.Amount.Name = "Amount";
+            this.Amount.Size = new System.Drawing.Size(132, 22);
+            this.Amount.TabIndex = 11;
             // 
             // radioButton2
             // 
@@ -153,8 +153,8 @@
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.Description);
+            this.Controls.Add(this.Amount);
             this.Controls.Add(this.radioButton2);
             this.Controls.Add(this.radioButton1);
             this.Margin = new System.Windows.Forms.Padding(4);
@@ -172,8 +172,8 @@
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox Description;
+        private System.Windows.Forms.TextBox Amount;
         private System.Windows.Forms.RadioButton radioButton2;
         private System.Windows.Forms.RadioButton radioButton1;
         private System.Windows.Forms.Button button2;

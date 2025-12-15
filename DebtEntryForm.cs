@@ -19,6 +19,18 @@ namespace BudgetTracker
 
         private void button1_Click(object sender, EventArgs e)//submit button
         {
+
+
+            if(radioButton1.Checked)
+            {
+;                DataBase.AddNewLoan(double.Parse(Amount.Text), dateTimePicker1.Value,
+                 Description.Text);//
+            }
+            else if(radioButton2.Checked)
+            {
+                DataBase.AddNewReceivable(double.Parse(Amount.Text), dateTimePicker1.Value,
+                Description.Text);//нужно будет создать для формы поля ввода и спарсить сюда потом
+            }
             //function required
 
             DebtForm debt = new DebtForm();
