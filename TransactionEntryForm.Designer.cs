@@ -43,13 +43,12 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.Taxable = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // radioButton1
             // 
             this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(80, 82);
+            this.radioButton1.Location = new System.Drawing.Point(80, 93);
             this.radioButton1.Margin = new System.Windows.Forms.Padding(4);
             this.radioButton1.Name = "radioButton1";
             this.radioButton1.Size = new System.Drawing.Size(72, 20);
@@ -62,7 +61,7 @@
             // radioButton2
             // 
             this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(80, 181);
+            this.radioButton2.Location = new System.Drawing.Point(80, 161);
             this.radioButton2.Margin = new System.Windows.Forms.Padding(4);
             this.radioButton2.Name = "radioButton2";
             this.radioButton2.Size = new System.Drawing.Size(81, 20);
@@ -74,7 +73,7 @@
             // 
             // Amount
             // 
-            this.Amount.Location = new System.Drawing.Point(112, 326);
+            this.Amount.Location = new System.Drawing.Point(99, 260);
             this.Amount.Margin = new System.Windows.Forms.Padding(4);
             this.Amount.Name = "Amount";
             this.Amount.Size = new System.Drawing.Size(132, 22);
@@ -83,7 +82,7 @@
             // 
             // Description
             // 
-            this.Description.Location = new System.Drawing.Point(279, 326);
+            this.Description.Location = new System.Drawing.Point(270, 260);
             this.Description.Margin = new System.Windows.Forms.Padding(4);
             this.Description.Name = "Description";
             this.Description.Size = new System.Drawing.Size(226, 22);
@@ -92,7 +91,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(109, 294);
+            this.label1.Location = new System.Drawing.Point(96, 240);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(52, 16);
@@ -102,7 +101,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(275, 294);
+            this.label2.Location = new System.Drawing.Point(267, 240);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(75, 16);
@@ -111,7 +110,7 @@
             // 
             // dateTimePicker1
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(113, 405);
+            this.dateTimePicker1.Location = new System.Drawing.Point(80, 322);
             this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(4);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(265, 22);
@@ -121,7 +120,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(109, 373);
+            this.label3.Location = new System.Drawing.Point(77, 302);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(85, 16);
@@ -130,7 +129,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(129, 481);
+            this.button1.Location = new System.Drawing.Point(80, 366);
             this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(100, 28);
@@ -141,7 +140,7 @@
             // 
             // Category
             // 
-            this.Category.Location = new System.Drawing.Point(548, 332);
+            this.Category.Location = new System.Drawing.Point(535, 260);
             this.Category.Margin = new System.Windows.Forms.Padding(4);
             this.Category.Name = "Category";
             this.Category.Size = new System.Drawing.Size(181, 22);
@@ -149,7 +148,7 @@
             // 
             // Currency
             // 
-            this.Currency.Location = new System.Drawing.Point(793, 333);
+            this.Currency.Location = new System.Drawing.Point(753, 260);
             this.Currency.Margin = new System.Windows.Forms.Padding(4);
             this.Currency.Name = "Currency";
             this.Currency.Size = new System.Drawing.Size(198, 22);
@@ -158,7 +157,7 @@
             // 
             // Merch
             // 
-            this.Merch.Location = new System.Drawing.Point(210, 181);
+            this.Merch.Location = new System.Drawing.Point(201, 161);
             this.Merch.Margin = new System.Windows.Forms.Padding(4);
             this.Merch.Name = "Merch";
             this.Merch.Size = new System.Drawing.Size(295, 22);
@@ -167,7 +166,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(307, 161);
+            this.label4.Location = new System.Drawing.Point(300, 141);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(99, 16);
@@ -177,7 +176,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(839, 294);
+            this.label5.Location = new System.Drawing.Point(750, 240);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(60, 16);
@@ -187,7 +186,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(591, 294);
+            this.label6.Location = new System.Drawing.Point(532, 240);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(62, 16);
@@ -204,12 +203,24 @@
             this.Taxable.Text = "Taxable";
             this.Taxable.UseVisualStyleBackColor = true;
             // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(75, 22);
+            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(277, 29);
+            this.label8.TabIndex = 19;
+            this.label8.Text = "Register new transaction";
+            // 
             // TransactionEntryForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(1067, 554);
+            this.BackColor = System.Drawing.Color.LightBlue;
+            this.ClientSize = new System.Drawing.Size(1035, 491);
+            this.Controls.Add(this.label8);
             this.Controls.Add(this.Taxable);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
