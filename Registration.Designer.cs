@@ -44,7 +44,7 @@
             // 
             this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.button2.Location = new System.Drawing.Point(193, 220);
+            this.button2.Location = new System.Drawing.Point(189, 223);
             this.button2.Margin = new System.Windows.Forms.Padding(5);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(99, 28);
@@ -55,7 +55,7 @@
             // 
             // Password
             // 
-            this.Password.Location = new System.Drawing.Point(185, 127);
+            this.Password.Location = new System.Drawing.Point(181, 130);
             this.Password.Margin = new System.Windows.Forms.Padding(5);
             this.Password.Name = "Password";
             this.Password.PasswordChar = '*';
@@ -65,7 +65,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(87, 130);
+            this.label2.Location = new System.Drawing.Point(83, 133);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(70, 16);
@@ -74,7 +74,7 @@
             // 
             // Email
             // 
-            this.Email.Location = new System.Drawing.Point(185, 95);
+            this.Email.Location = new System.Drawing.Point(181, 98);
             this.Email.Margin = new System.Windows.Forms.Padding(5);
             this.Email.Name = "Email";
             this.Email.Size = new System.Drawing.Size(132, 22);
@@ -83,7 +83,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(87, 98);
+            this.label1.Location = new System.Drawing.Point(83, 101);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(44, 16);
@@ -92,7 +92,7 @@
             // 
             // Confirm_Pas
             // 
-            this.Confirm_Pas.Location = new System.Drawing.Point(185, 159);
+            this.Confirm_Pas.Location = new System.Drawing.Point(181, 162);
             this.Confirm_Pas.Margin = new System.Windows.Forms.Padding(5);
             this.Confirm_Pas.Name = "Confirm_Pas";
             this.Confirm_Pas.PasswordChar = '*';
@@ -102,7 +102,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(59, 162);
+            this.label3.Location = new System.Drawing.Point(55, 165);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(117, 16);
@@ -111,7 +111,7 @@
             // 
             // Name
             // 
-            this.Name.Location = new System.Drawing.Point(185, 63);
+            this.Name.Location = new System.Drawing.Point(181, 66);
             this.Name.Margin = new System.Windows.Forms.Padding(5);
             this.Name.Name = "Name";
             this.Name.Size = new System.Drawing.Size(132, 22);
@@ -120,7 +120,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(87, 66);
+            this.label4.Location = new System.Drawing.Point(83, 69);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(47, 16);
@@ -133,7 +133,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(170, 15);
+            this.label5.Location = new System.Drawing.Point(166, 18);
             this.label5.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(142, 29);
@@ -145,7 +145,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightBlue;
-            this.ClientSize = new System.Drawing.Size(482, 503);
+            this.ClientSize = new System.Drawing.Size(482, 442);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.Name);
             this.Controls.Add(this.label4);
