@@ -19,16 +19,36 @@ namespace BudgetTracker
             this.user = user;
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)//submit button
         {
-            if(LoanRadioButton.Checked)
+
+
+            if(radioButton1.Checked)
             {
-                //DataBase.AddNewLoan();
+;                DataBase.AddNewLoan(double.Parse(Amount.Text), dateTimePicker1.Value,
+                 Description.Text);//
             }
-            else if(ReceivableRadioButton.Checked)
+            else if(radioButton2.Checked)
             {
-                //DataBase.AddNewReceivable();
+                DataBase.AddNewReceivable(double.Parse(Amount.Text), dateTimePicker1.Value,
+                Description.Text);//нужно будет создать для формы поля ввода и спарсить сюда потом
             }
+            //function required
+
+            DebtForm debt = new DebtForm();
+            this.Hide();
+            debt.ShowDialog();
+            this.Close();
+        }
+
+        private void button2_Click(object sender, EventArgs e)//Return to main page
+        {
+            MainForm Main = new MainForm();
+            this.Hide();
+            Main.ShowDialog();
+            this.Close();
+
+            
         }
     }
 }

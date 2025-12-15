@@ -33,11 +33,11 @@
             this.CustomDateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.DescriptionTextBox = new System.Windows.Forms.TextBox();
-            this.AmountTextBox = new System.Windows.Forms.TextBox();
-            this.ReceivableRadioButton = new System.Windows.Forms.RadioButton();
-            this.LoanRadioButton = new System.Windows.Forms.RadioButton();
-            this.label4 = new System.Windows.Forms.Label();
+            this.Description = new System.Windows.Forms.TextBox();
+            this.Amount = new System.Windows.Forms.TextBox();
+            this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.button2 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // SubmitButton
@@ -84,51 +84,57 @@
             this.label1.TabIndex = 13;
             this.label1.Text = "Amount";
             // 
-            // DescriptionTextBox
+            // Description
             // 
-            this.DescriptionTextBox.Location = new System.Drawing.Point(224, 166);
-            this.DescriptionTextBox.Name = "DescriptionTextBox";
-            this.DescriptionTextBox.Size = new System.Drawing.Size(222, 20);
-            this.DescriptionTextBox.TabIndex = 12;
+            this.Description.Location = new System.Drawing.Point(348, 207);
+            this.Description.Margin = new System.Windows.Forms.Padding(4);
+            this.Description.Name = "Description";
+            this.Description.Size = new System.Drawing.Size(295, 22);
+            this.Description.TabIndex = 12;
             // 
-            // AmountTextBox
+            // Amount
             // 
-            this.AmountTextBox.Location = new System.Drawing.Point(94, 166);
-            this.AmountTextBox.Name = "AmountTextBox";
-            this.AmountTextBox.Size = new System.Drawing.Size(100, 20);
-            this.AmountTextBox.TabIndex = 11;
+            this.Amount.Location = new System.Drawing.Point(181, 207);
+            this.Amount.Margin = new System.Windows.Forms.Padding(4);
+            this.Amount.Name = "Amount";
+            this.Amount.Size = new System.Drawing.Size(132, 22);
+            this.Amount.TabIndex = 11;
             // 
-            // ReceivableRadioButton
+            // radioButton2
             // 
-            this.ReceivableRadioButton.AutoSize = true;
-            this.ReceivableRadioButton.Location = new System.Drawing.Point(81, 99);
-            this.ReceivableRadioButton.Name = "ReceivableRadioButton";
-            this.ReceivableRadioButton.Size = new System.Drawing.Size(79, 17);
-            this.ReceivableRadioButton.TabIndex = 10;
-            this.ReceivableRadioButton.TabStop = true;
-            this.ReceivableRadioButton.Text = "Receivable";
-            this.ReceivableRadioButton.UseVisualStyleBackColor = true;
+            this.radioButton2.AutoSize = true;
+            this.radioButton2.Location = new System.Drawing.Point(197, 119);
+            this.radioButton2.Margin = new System.Windows.Forms.Padding(4);
+            this.radioButton2.Name = "radioButton2";
+            this.radioButton2.Size = new System.Drawing.Size(90, 20);
+            this.radioButton2.TabIndex = 10;
+            this.radioButton2.TabStop = true;
+            this.radioButton2.Text = "Recivable";
+            this.radioButton2.UseVisualStyleBackColor = true;
             // 
-            // LoanRadioButton
+            // radioButton1
             // 
-            this.LoanRadioButton.AutoSize = true;
-            this.LoanRadioButton.Location = new System.Drawing.Point(81, 68);
-            this.LoanRadioButton.Name = "LoanRadioButton";
-            this.LoanRadioButton.Size = new System.Drawing.Size(49, 17);
-            this.LoanRadioButton.TabIndex = 9;
-            this.LoanRadioButton.TabStop = true;
-            this.LoanRadioButton.Text = "Loan";
-            this.LoanRadioButton.UseVisualStyleBackColor = true;
+            this.radioButton1.AutoSize = true;
+            this.radioButton1.Location = new System.Drawing.Point(197, 69);
+            this.radioButton1.Margin = new System.Windows.Forms.Padding(4);
+            this.radioButton1.Name = "radioButton1";
+            this.radioButton1.Size = new System.Drawing.Size(58, 20);
+            this.radioButton1.TabIndex = 9;
+            this.radioButton1.TabStop = true;
+            this.radioButton1.Text = "Loan";
+            this.radioButton1.UseVisualStyleBackColor = true;
             // 
-            // label4
+            // button2
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(77, 31);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(162, 24);
-            this.label4.TabIndex = 18;
-            this.label4.Text = "Register new debt";
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Location = new System.Drawing.Point(917, 44);
+            this.button2.Margin = new System.Windows.Forms.Padding(4);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(46, 45);
+            this.button2.TabIndex = 18;
+            this.button2.Text = "🏠︎";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // DebtEntryForm
             // 
@@ -138,6 +144,7 @@
             this.ClientSize = new System.Drawing.Size(550, 379);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.SubmitButton);
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.CustomDateTimePicker);
             this.Controls.Add(this.label2);
@@ -146,6 +153,7 @@
             this.Controls.Add(this.AmountTextBox);
             this.Controls.Add(this.ReceivableRadioButton);
             this.Controls.Add(this.LoanRadioButton);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "DebtEntryForm";
             this.Text = "DebtEntryForm";
             this.ResumeLayout(false);
@@ -165,5 +173,6 @@
         private System.Windows.Forms.RadioButton ReceivableRadioButton;
         private System.Windows.Forms.RadioButton LoanRadioButton;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button button2;
     }
 }
