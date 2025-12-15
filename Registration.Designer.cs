@@ -37,12 +37,13 @@
             this.label3 = new System.Windows.Forms.Label();
             this.Name = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // button2
             // 
             this.button2.Location = new System.Drawing.Point(177, 190);
-            this.button2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button2.Margin = new System.Windows.Forms.Padding(4);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(99, 28);
             this.button2.TabIndex = 11;
@@ -53,7 +54,7 @@
             // Password
             // 
             this.Password.Location = new System.Drawing.Point(163, 121);
-            this.Password.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Password.Margin = new System.Windows.Forms.Padding(4);
             this.Password.Name = "Password";
             this.Password.PasswordChar = '*';
             this.Password.Size = new System.Drawing.Size(132, 22);
@@ -72,7 +73,7 @@
             // Email
             // 
             this.Email.Location = new System.Drawing.Point(163, 89);
-            this.Email.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Email.Margin = new System.Windows.Forms.Padding(4);
             this.Email.Name = "Email";
             this.Email.Size = new System.Drawing.Size(132, 22);
             this.Email.TabIndex = 8;
@@ -90,7 +91,7 @@
             // Confirm_Pas
             // 
             this.Confirm_Pas.Location = new System.Drawing.Point(163, 150);
-            this.Confirm_Pas.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Confirm_Pas.Margin = new System.Windows.Forms.Padding(4);
             this.Confirm_Pas.Name = "Confirm_Pas";
             this.Confirm_Pas.PasswordChar = '*';
             this.Confirm_Pas.Size = new System.Drawing.Size(132, 22);
@@ -109,7 +110,7 @@
             // Name
             // 
             this.Name.Location = new System.Drawing.Point(163, 55);
-            this.Name.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Name.Margin = new System.Windows.Forms.Padding(4);
             this.Name.Name = "Name";
             this.Name.Size = new System.Drawing.Size(132, 22);
             this.Name.TabIndex = 15;
@@ -124,12 +125,26 @@
             this.label4.TabIndex = 14;
             this.label4.Text = "Name:";
             // 
+            // label5
+            // 
+            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(155, 9);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(114, 25);
+            this.label5.TabIndex = 16;
+            this.label5.Text = "Registration";
+            // 
             // RegistrationForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.ClientSize = new System.Drawing.Size(435, 450);
+            this.BackColor = System.Drawing.Color.Lavender;
+            this.ClientSize = new System.Drawing.Size(432, 450);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.Name);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -158,5 +173,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox Name;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
     }
 }
