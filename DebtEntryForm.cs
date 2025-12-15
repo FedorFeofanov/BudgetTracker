@@ -25,13 +25,13 @@ namespace BudgetTracker
 
             if (LoanRadioButton.Checked)
             {
-                ; DataBase.AddNewLoan(double.Parse(AmountTextBox.Text), CustomDateTimePicker.Value,
-                                 DescriptionTextBox.Text);
+;                //DataBase.AddNewLoan(double.Parse(AmountTextBox.Text), CustomDateTimePicker.Value,
+                 //DescriptionTextBox.Text);
             }
             else if (ReceivableRadioButton.Checked)
             {
-                DataBase.AddNewReceivable(double.Parse(AmountTextBox.Text), CustomDateTimePicker.Value,
-                DescriptionTextBox.Text);//нужно будет создать для формы поля ввода и спарсить сюда потом
+                //DataBase.AddNewReceivable(double.Parse(AmountTextBox.Text), CustomDateTimePicker.Value,
+                //DescriptionTextBox.Text);//нужно будет создать для формы поля ввода и спарсить сюда потом
             }
             //function required
 
