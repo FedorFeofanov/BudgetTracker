@@ -17,9 +17,24 @@ namespace BudgetTracker
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)//submit button
         {
+            //function required
 
+            DebtForm debt = new DebtForm();
+            this.Hide();
+            debt.ShowDialog();
+            this.Close();
+        }
+
+        private void button2_Click(object sender, EventArgs e)//Return to main page
+        {
+            MainForm Main = new MainForm();
+            this.Hide();
+            Main.ShowDialog();
+            this.Close();
+
+            
         }
     }
 }

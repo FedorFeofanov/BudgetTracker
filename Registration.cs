@@ -60,5 +60,10 @@ namespace BudgetTracker
             form1.ShowDialog();
             this.Close();
         }
+
+        private void RegistrationForm_Load(object sender, EventArgs e)
+        {
+            Name.Focus();   
+        }
     }
 }
