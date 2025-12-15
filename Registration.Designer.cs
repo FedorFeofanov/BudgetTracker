@@ -41,9 +41,10 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(133, 154);
+            this.button2.Location = new System.Drawing.Point(177, 190);
+            this.button2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(74, 23);
+            this.button2.Size = new System.Drawing.Size(99, 28);
             this.button2.TabIndex = 11;
             this.button2.Text = "Sign up";
             this.button2.UseVisualStyleBackColor = true;
@@ -51,76 +52,84 @@
             // 
             // Password
             // 
-            this.Password.Location = new System.Drawing.Point(122, 98);
+            this.Password.Location = new System.Drawing.Point(163, 121);
+            this.Password.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Password.Name = "Password";
             this.Password.PasswordChar = '*';
-            this.Password.Size = new System.Drawing.Size(100, 20);
+            this.Password.Size = new System.Drawing.Size(132, 22);
             this.Password.TabIndex = 10;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(28, 101);
+            this.label2.Location = new System.Drawing.Point(37, 124);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(56, 13);
+            this.label2.Size = new System.Drawing.Size(70, 16);
             this.label2.TabIndex = 9;
             this.label2.Text = "Password:";
             // 
             // Email
             // 
-            this.Email.Location = new System.Drawing.Point(122, 72);
+            this.Email.Location = new System.Drawing.Point(163, 89);
+            this.Email.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Email.Name = "Email";
-            this.Email.Size = new System.Drawing.Size(100, 20);
+            this.Email.Size = new System.Drawing.Size(132, 22);
             this.Email.TabIndex = 8;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(28, 77);
+            this.label1.Location = new System.Drawing.Point(37, 95);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(35, 13);
+            this.label1.Size = new System.Drawing.Size(44, 16);
             this.label1.TabIndex = 7;
             this.label1.Text = "Email:";
             // 
             // Confirm_Pas
             // 
-            this.Confirm_Pas.Location = new System.Drawing.Point(122, 122);
+            this.Confirm_Pas.Location = new System.Drawing.Point(163, 150);
+            this.Confirm_Pas.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Confirm_Pas.Name = "Confirm_Pas";
             this.Confirm_Pas.PasswordChar = '*';
-            this.Confirm_Pas.Size = new System.Drawing.Size(100, 20);
+            this.Confirm_Pas.Size = new System.Drawing.Size(132, 22);
             this.Confirm_Pas.TabIndex = 12;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(28, 127);
+            this.label3.Location = new System.Drawing.Point(37, 156);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(93, 13);
+            this.label3.Size = new System.Drawing.Size(117, 16);
             this.label3.TabIndex = 13;
             this.label3.Text = "Confirm password:";
             // 
             // Name
             // 
-            this.Name.Location = new System.Drawing.Point(122, 45);
+            this.Name.Location = new System.Drawing.Point(163, 55);
+            this.Name.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name.Name = "Name";
-            this.Name.Size = new System.Drawing.Size(100, 20);
+            this.Name.Size = new System.Drawing.Size(132, 22);
             this.Name.TabIndex = 15;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(28, 50);
+            this.label4.Location = new System.Drawing.Point(37, 62);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(38, 13);
+            this.label4.Size = new System.Drawing.Size(47, 16);
             this.label4.TabIndex = 14;
             this.label4.Text = "Name:";
             // 
             // RegistrationForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(326, 366);
+            this.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.ClientSize = new System.Drawing.Size(435, 450);
             this.Controls.Add(this.Name);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -130,7 +139,8 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.Email);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Name = "RegistrationForm";
             this.Text = "Registration";
             this.ResumeLayout(false);
             this.PerformLayout();
