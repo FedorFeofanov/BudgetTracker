@@ -13,6 +13,7 @@ namespace BudgetTracker
 {
     public partial class Form1 : Form
     {
+
         public Form1()
         {
             InitializeComponent();
@@ -47,6 +48,11 @@ namespace BudgetTracker
             MessageBox.Show("Incorrect login or password. Try again.", "Login failure!",
             MessageBoxButtons.OK, MessageBoxIcon.Error);
             Password.Clear();
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            Login.Focus();
         }
     }
 }
