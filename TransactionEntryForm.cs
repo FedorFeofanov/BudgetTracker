@@ -46,7 +46,7 @@ namespace BudgetTracker
             else if(radioButton2.Checked)
             {
                 DataBase.AddNewIncome(double.Parse(Amount.Text), dateTimePicker1.Value,
-                Description.Text, Category.Text, Currency.Text, Merch.Text);
+                Description.Text, Category.Text, Currency.Text, Taxable.Checked);
             }
         }
 
