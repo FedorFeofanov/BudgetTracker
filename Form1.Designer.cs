@@ -138,7 +138,11 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+<<<<<<< HEAD
+            this.BackColor = System.Drawing.Color.LightBlue;
+=======
             this.BackColor = System.Drawing.Color.Lavender;
+>>>>>>> 23d7d3d6157ebadca02c173480effcdcd722a8d5
             this.ClientSize = new System.Drawing.Size(398, 491);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.button2);
