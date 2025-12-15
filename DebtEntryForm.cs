@@ -23,15 +23,15 @@ namespace BudgetTracker
         {
 
 
-            if(radioButton1.Checked)
+            if(LoanRadioButton.Checked)
             {
-;                DataBase.AddNewLoan(double.Parse(Amount.Text), dateTimePicker1.Value,
-                 Description.Text);//
+;                DataBase.AddNewLoan(double.Parse(AmountTextBox.Text), CustomDateTimePicker.Value,
+                 DescriptionTextBox.Text);
             }
-            else if(radioButton2.Checked)
+            else if(ReceivableRadioButton.Checked)
             {
-                DataBase.AddNewReceivable(double.Parse(Amount.Text), dateTimePicker1.Value,
-                Description.Text);//нужно будет создать для формы поля ввода и спарсить сюда потом
+                DataBase.AddNewReceivable(double.Parse(AmountTextBox.Text), CustomDateTimePicker.Value,
+                DescriptionTextBox.Text);//нужно будет создать для формы поля ввода и спарсить сюда потом
             }
             //function required
 
@@ -43,7 +43,7 @@ namespace BudgetTracker
 
         private void button2_Click(object sender, EventArgs e)//Return to main page
         {
-            MainForm Main = new MainForm();
+            MainForm Main = new MainForm(user: user);
             this.Hide();
             Main.ShowDialog();
             this.Close();
