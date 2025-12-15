@@ -38,6 +38,16 @@
             this.ReceivableRadioButton = new System.Windows.Forms.RadioButton();
             this.LoanRadioButton = new System.Windows.Forms.RadioButton();
             this.label4 = new System.Windows.Forms.Label();
+            this.borrowerNameTextBox = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.label7 = new System.Windows.Forms.Label();
+            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
+            this.label8 = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
             this.SuspendLayout();
             // 
             // SubmitButton
@@ -130,12 +140,84 @@
             this.label4.TabIndex = 18;
             this.label4.Text = "Register new debt";
             // 
+            // borrowerNameTextBox
+            // 
+            this.borrowerNameTextBox.Location = new System.Drawing.Point(274, 96);
+            this.borrowerNameTextBox.Name = "borrowerNameTextBox";
+            this.borrowerNameTextBox.Size = new System.Drawing.Size(100, 20);
+            this.borrowerNameTextBox.TabIndex = 19;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(188, 101);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(83, 13);
+            this.label5.TabIndex = 20;
+            this.label5.Text = "Borrower Name:";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(397, 99);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(138, 13);
+            this.label6.TabIndex = 22;
+            this.label6.Text = "Expected Repayment Date:";
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Location = new System.Drawing.Point(541, 96);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(199, 20);
+            this.dateTimePicker1.TabIndex = 23;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(757, 99);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(111, 13);
+            this.label7.TabIndex = 24;
+            this.label7.Text = "Repayment Collected:";
+            // 
+            // numericUpDown1
+            // 
+            this.numericUpDown1.Location = new System.Drawing.Point(874, 97);
+            this.numericUpDown1.Name = "numericUpDown1";
+            this.numericUpDown1.Size = new System.Drawing.Size(120, 20);
+            this.numericUpDown1.TabIndex = 25;
+            // 
+            // numericUpDown2
+            // 
+            this.numericUpDown2.Location = new System.Drawing.Point(400, 219);
+            this.numericUpDown2.Name = "numericUpDown2";
+            this.numericUpDown2.Size = new System.Drawing.Size(120, 20);
+            this.numericUpDown2.TabIndex = 27;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(325, 221);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(71, 13);
+            this.label8.TabIndex = 26;
+            this.label8.Text = "Interest Rate:";
+            // 
             // DebtEntryForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightBlue;
-            this.ClientSize = new System.Drawing.Size(550, 379);
+            this.ClientSize = new System.Drawing.Size(1158, 379);
+            this.Controls.Add(this.numericUpDown2);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.numericUpDown1);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.borrowerNameTextBox);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.SubmitButton);
             this.Controls.Add(this.label3);
@@ -148,6 +230,8 @@
             this.Controls.Add(this.LoanRadioButton);
             this.Name = "DebtEntryForm";
             this.Text = "DebtEntryForm";
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -165,5 +249,13 @@
         private System.Windows.Forms.RadioButton ReceivableRadioButton;
         private System.Windows.Forms.RadioButton LoanRadioButton;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox borrowerNameTextBox;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.NumericUpDown numericUpDown1;
+        private System.Windows.Forms.NumericUpDown numericUpDown2;
+        private System.Windows.Forms.Label label8;
     }
 }
