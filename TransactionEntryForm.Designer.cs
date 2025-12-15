@@ -43,6 +43,8 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.Taxable = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // radioButton1
@@ -193,16 +195,6 @@
             this.label6.TabIndex = 14;
             this.label6.Text = "Category";
             // 
-            // Taxable
-            // 
-            this.Taxable.AutoSize = true;
-            this.Taxable.Location = new System.Drawing.Point(311, 83);
-            this.Taxable.Name = "Taxable";
-            this.Taxable.Size = new System.Drawing.Size(79, 20);
-            this.Taxable.TabIndex = 17;
-            this.Taxable.Text = "Taxable";
-            this.Taxable.UseVisualStyleBackColor = true;
-            // 
             // label8
             // 
             this.label8.AutoSize = true;
@@ -213,6 +205,16 @@
             this.label8.Size = new System.Drawing.Size(277, 29);
             this.label8.TabIndex = 19;
             this.label8.Text = "Register new transaction";
+            // 
+            // Taxable
+            // 
+            this.Taxable.AutoSize = true;
+            this.Taxable.Location = new System.Drawing.Point(201, 94);
+            this.Taxable.Name = "Taxable";
+            this.Taxable.Size = new System.Drawing.Size(79, 20);
+            this.Taxable.TabIndex = 17;
+            this.Taxable.Text = "Taxable";
+            this.Taxable.UseVisualStyleBackColor = true;
             // 
             // TransactionEntryForm
             // 
@@ -263,6 +265,7 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label8;
         private System.Windows.Forms.CheckBox Taxable;
     }
 }
