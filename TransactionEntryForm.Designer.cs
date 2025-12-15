@@ -43,8 +43,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.Taxable = new System.Windows.Forms.TextBox();
+            this.Taxable = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // radioButton1
@@ -195,23 +194,15 @@
             this.label6.TabIndex = 14;
             this.label6.Text = "Category";
             // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(321, 62);
-            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(57, 16);
-            this.label7.TabIndex = 16;
-            this.label7.Text = "Taxable";
-            // 
             // Taxable
             // 
-            this.Taxable.Location = new System.Drawing.Point(201, 82);
-            this.Taxable.Margin = new System.Windows.Forms.Padding(4);
+            this.Taxable.AutoSize = true;
+            this.Taxable.Location = new System.Drawing.Point(311, 83);
             this.Taxable.Name = "Taxable";
-            this.Taxable.Size = new System.Drawing.Size(295, 22);
-            this.Taxable.TabIndex = 18;
+            this.Taxable.Size = new System.Drawing.Size(79, 20);
+            this.Taxable.TabIndex = 17;
+            this.Taxable.Text = "Taxable";
+            this.Taxable.UseVisualStyleBackColor = true;
             // 
             // TransactionEntryForm
             // 
@@ -220,7 +211,6 @@
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(1067, 554);
             this.Controls.Add(this.Taxable);
-            this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
@@ -262,7 +252,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox Taxable;
+        private System.Windows.Forms.CheckBox Taxable;
     }
 }
