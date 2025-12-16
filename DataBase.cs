@@ -116,7 +116,7 @@ namespace BudgetTracker
             }
             return maxId + 1;
         }
-        public static Loan AddNewLoan(string landerName, double originalAmount, double currentBalance, double interestRate, DateTime startDate, string debtType, string status, int UserID, DateTime dueDate, double minimumPayment, int termInMonths, string paymentFrequency)
+        public static Loan AddNewLoan(string landerName, double originalAmount, double currentBalance, double interestRate, DateTime startDate, string debtType, string status, int UserID, DateTime dueDate, double minimumPayment, double paymentFrequency)
         {
             int iD = GetNextIdLoan();
             Loan loan = new Loan(iD, landerName, originalAmount, currentBalance, interestRate, startDate, debtType, status, UserID, dueDate, minimumPayment, paymentFrequency);
