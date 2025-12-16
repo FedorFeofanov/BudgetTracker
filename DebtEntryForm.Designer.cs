@@ -33,11 +33,36 @@
             this.CustomDateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.DescriptionTextBox = new System.Windows.Forms.TextBox();
-            this.AmountTextBox = new System.Windows.Forms.TextBox();
+            this.descriptionTextBox = new System.Windows.Forms.TextBox();
             this.ReceivableRadioButton = new System.Windows.Forms.RadioButton();
             this.LoanRadioButton = new System.Windows.Forms.RadioButton();
             this.label4 = new System.Windows.Forms.Label();
+            this.borrowerNameTextBox = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.expectedRepaymentDateDateTimePicker = new System.Windows.Forms.DateTimePicker();
+            this.label7 = new System.Windows.Forms.Label();
+            this.repaymentCollectedNumericUpDown = new System.Windows.Forms.NumericUpDown();
+            this.interestRateNumericUpDown = new System.Windows.Forms.NumericUpDown();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.LanderNameTextBox = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.statusTextBox = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.debtTypeTextBox = new System.Windows.Forms.TextBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.DueDateDateTimePicker = new System.Windows.Forms.DateTimePicker();
+            this.MinimumPaymentNumericUpDown = new System.Windows.Forms.NumericUpDown();
+            this.label13 = new System.Windows.Forms.Label();
+            this.PaymentFrequencyNumericUpDown = new System.Windows.Forms.NumericUpDown();
+            this.label14 = new System.Windows.Forms.Label();
+            this.amountNumericUpDown = new System.Windows.Forms.NumericUpDown();
+            ((System.ComponentModel.ISupportInitialize)(this.repaymentCollectedNumericUpDown)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.interestRateNumericUpDown)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MinimumPaymentNumericUpDown)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PaymentFrequencyNumericUpDown)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.amountNumericUpDown)).BeginInit();
             this.SuspendLayout();
             // 
             // SubmitButton
@@ -84,19 +109,12 @@
             this.label1.TabIndex = 13;
             this.label1.Text = "Amount";
             // 
-            // DescriptionTextBox
+            // descriptionTextBox
             // 
-            this.DescriptionTextBox.Location = new System.Drawing.Point(224, 166);
-            this.DescriptionTextBox.Name = "DescriptionTextBox";
-            this.DescriptionTextBox.Size = new System.Drawing.Size(222, 20);
-            this.DescriptionTextBox.TabIndex = 12;
-            // 
-            // AmountTextBox
-            // 
-            this.AmountTextBox.Location = new System.Drawing.Point(94, 166);
-            this.AmountTextBox.Name = "AmountTextBox";
-            this.AmountTextBox.Size = new System.Drawing.Size(100, 20);
-            this.AmountTextBox.TabIndex = 11;
+            this.descriptionTextBox.Location = new System.Drawing.Point(224, 166);
+            this.descriptionTextBox.Name = "descriptionTextBox";
+            this.descriptionTextBox.Size = new System.Drawing.Size(222, 20);
+            this.descriptionTextBox.TabIndex = 12;
             // 
             // ReceivableRadioButton
             // 
@@ -130,24 +148,217 @@
             this.label4.TabIndex = 18;
             this.label4.Text = "Register new debt";
             // 
+            // borrowerNameTextBox
+            // 
+            this.borrowerNameTextBox.Location = new System.Drawing.Point(274, 96);
+            this.borrowerNameTextBox.Name = "borrowerNameTextBox";
+            this.borrowerNameTextBox.Size = new System.Drawing.Size(100, 20);
+            this.borrowerNameTextBox.TabIndex = 19;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(188, 101);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(83, 13);
+            this.label5.TabIndex = 20;
+            this.label5.Text = "Borrower Name:";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(397, 99);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(138, 13);
+            this.label6.TabIndex = 22;
+            this.label6.Text = "Expected Repayment Date:";
+            // 
+            // expectedRepaymentDateDateTimePicker
+            // 
+            this.expectedRepaymentDateDateTimePicker.Location = new System.Drawing.Point(541, 96);
+            this.expectedRepaymentDateDateTimePicker.Name = "expectedRepaymentDateDateTimePicker";
+            this.expectedRepaymentDateDateTimePicker.Size = new System.Drawing.Size(199, 20);
+            this.expectedRepaymentDateDateTimePicker.TabIndex = 23;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(757, 99);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(111, 13);
+            this.label7.TabIndex = 24;
+            this.label7.Text = "Repayment Collected:";
+            // 
+            // repaymentCollectedNumericUpDown
+            // 
+            this.repaymentCollectedNumericUpDown.Location = new System.Drawing.Point(874, 97);
+            this.repaymentCollectedNumericUpDown.Name = "repaymentCollectedNumericUpDown";
+            this.repaymentCollectedNumericUpDown.Size = new System.Drawing.Size(120, 20);
+            this.repaymentCollectedNumericUpDown.TabIndex = 25;
+            // 
+            // interestRateNumericUpDown
+            // 
+            this.interestRateNumericUpDown.Location = new System.Drawing.Point(400, 219);
+            this.interestRateNumericUpDown.Name = "interestRateNumericUpDown";
+            this.interestRateNumericUpDown.Size = new System.Drawing.Size(120, 20);
+            this.interestRateNumericUpDown.TabIndex = 27;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(325, 221);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(71, 13);
+            this.label8.TabIndex = 26;
+            this.label8.Text = "Interest Rate:";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(189, 70);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(74, 13);
+            this.label9.TabIndex = 29;
+            this.label9.Text = "Lander Name:";
+            // 
+            // LanderNameTextBox
+            // 
+            this.LanderNameTextBox.Location = new System.Drawing.Point(275, 65);
+            this.LanderNameTextBox.Name = "LanderNameTextBox";
+            this.LanderNameTextBox.Size = new System.Drawing.Size(100, 20);
+            this.LanderNameTextBox.TabIndex = 28;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(516, 169);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(40, 13);
+            this.label10.TabIndex = 31;
+            this.label10.Text = "Status:";
+            // 
+            // statusTextBox
+            // 
+            this.statusTextBox.Location = new System.Drawing.Point(562, 166);
+            this.statusTextBox.Name = "statusTextBox";
+            this.statusTextBox.Size = new System.Drawing.Size(100, 20);
+            this.statusTextBox.TabIndex = 30;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(516, 195);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(60, 13);
+            this.label11.TabIndex = 33;
+            this.label11.Text = "Debt Type:";
+            // 
+            // debtTypeTextBox
+            // 
+            this.debtTypeTextBox.Location = new System.Drawing.Point(582, 192);
+            this.debtTypeTextBox.Name = "debtTypeTextBox";
+            this.debtTypeTextBox.Size = new System.Drawing.Size(100, 20);
+            this.debtTypeTextBox.TabIndex = 32;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(397, 70);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(54, 13);
+            this.label12.TabIndex = 35;
+            this.label12.Text = "Due date:";
+            // 
+            // DueDateDateTimePicker
+            // 
+            this.DueDateDateTimePicker.Location = new System.Drawing.Point(457, 65);
+            this.DueDateDateTimePicker.Name = "DueDateDateTimePicker";
+            this.DueDateDateTimePicker.Size = new System.Drawing.Size(200, 20);
+            this.DueDateDateTimePicker.TabIndex = 34;
+            // 
+            // MinimumPaymentNumericUpDown
+            // 
+            this.MinimumPaymentNumericUpDown.Location = new System.Drawing.Point(782, 63);
+            this.MinimumPaymentNumericUpDown.Name = "MinimumPaymentNumericUpDown";
+            this.MinimumPaymentNumericUpDown.Size = new System.Drawing.Size(120, 20);
+            this.MinimumPaymentNumericUpDown.TabIndex = 37;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(681, 68);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(95, 13);
+            this.label13.TabIndex = 36;
+            this.label13.Text = "Minimum Payment:";
+            // 
+            // PaymentFrequencyNumericUpDown
+            // 
+            this.PaymentFrequencyNumericUpDown.Location = new System.Drawing.Point(1035, 63);
+            this.PaymentFrequencyNumericUpDown.Name = "PaymentFrequencyNumericUpDown";
+            this.PaymentFrequencyNumericUpDown.Size = new System.Drawing.Size(120, 20);
+            this.PaymentFrequencyNumericUpDown.TabIndex = 39;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(925, 66);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(104, 13);
+            this.label14.TabIndex = 38;
+            this.label14.Text = "Payment Frequency:";
+            // 
+            // amountNumericUpDown
+            // 
+            this.amountNumericUpDown.Location = new System.Drawing.Point(81, 167);
+            this.amountNumericUpDown.Name = "amountNumericUpDown";
+            this.amountNumericUpDown.Size = new System.Drawing.Size(120, 20);
+            this.amountNumericUpDown.TabIndex = 40;
+            // 
             // DebtEntryForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightBlue;
-            this.ClientSize = new System.Drawing.Size(550, 379);
+            this.ClientSize = new System.Drawing.Size(1158, 379);
+            this.Controls.Add(this.amountNumericUpDown);
+            this.Controls.Add(this.PaymentFrequencyNumericUpDown);
+            this.Controls.Add(this.label14);
+            this.Controls.Add(this.MinimumPaymentNumericUpDown);
+            this.Controls.Add(this.label13);
+            this.Controls.Add(this.label12);
+            this.Controls.Add(this.DueDateDateTimePicker);
+            this.Controls.Add(this.label11);
+            this.Controls.Add(this.debtTypeTextBox);
+            this.Controls.Add(this.label10);
+            this.Controls.Add(this.statusTextBox);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.LanderNameTextBox);
+            this.Controls.Add(this.interestRateNumericUpDown);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.repaymentCollectedNumericUpDown);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.expectedRepaymentDateDateTimePicker);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.borrowerNameTextBox);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.SubmitButton);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.CustomDateTimePicker);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.DescriptionTextBox);
-            this.Controls.Add(this.AmountTextBox);
+            this.Controls.Add(this.descriptionTextBox);
             this.Controls.Add(this.ReceivableRadioButton);
             this.Controls.Add(this.LoanRadioButton);
             this.Name = "DebtEntryForm";
             this.Text = "DebtEntryForm";
+            this.Load += new System.EventHandler(this.DebtEntryForm_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.repaymentCollectedNumericUpDown)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.interestRateNumericUpDown)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MinimumPaymentNumericUpDown)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PaymentFrequencyNumericUpDown)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.amountNumericUpDown)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -160,10 +371,30 @@
         private System.Windows.Forms.DateTimePicker CustomDateTimePicker;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox DescriptionTextBox;
-        private System.Windows.Forms.TextBox AmountTextBox;
+        private System.Windows.Forms.TextBox descriptionTextBox;
         private System.Windows.Forms.RadioButton ReceivableRadioButton;
         private System.Windows.Forms.RadioButton LoanRadioButton;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox borrowerNameTextBox;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.DateTimePicker expectedRepaymentDateDateTimePicker;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.NumericUpDown repaymentCollectedNumericUpDown;
+        private System.Windows.Forms.NumericUpDown interestRateNumericUpDown;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.TextBox LanderNameTextBox;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.TextBox statusTextBox;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.TextBox debtTypeTextBox;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.DateTimePicker DueDateDateTimePicker;
+        private System.Windows.Forms.NumericUpDown MinimumPaymentNumericUpDown;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.NumericUpDown PaymentFrequencyNumericUpDown;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.NumericUpDown amountNumericUpDown;
     }
 }
