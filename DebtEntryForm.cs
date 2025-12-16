@@ -35,7 +35,7 @@ namespace BudgetTracker
             }
             //function required
 
-            DebtForm debt = new DebtForm();
+            DebtForm debt = new DebtForm(user: user);
             this.Hide();
             debt.ShowDialog();
             this.Close();
