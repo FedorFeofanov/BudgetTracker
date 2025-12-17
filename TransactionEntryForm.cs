@@ -19,11 +19,17 @@ namespace BudgetTracker
             this.user = user;
             foreach (Loan loan in DataBase.Loans)
             {
-                loanComboBox.Items.Add(loan.ID);
+                if (loan.UserID == user.Id)
+                {
+                    loanComboBox.Items.Add(loan.ID);
+                }
             }
             foreach (Receivable receivable in DataBase.Receivables)
             {
-                receivableComboBox.Items.Add(receivable.ID);
+                if (receivable.UserID == user.Id)
+                {
+                    receivableComboBox.Items.Add(receivable.ID);
+                }
             }
             Merch.Enabled = false;
             Taxable.Enabled = false;
