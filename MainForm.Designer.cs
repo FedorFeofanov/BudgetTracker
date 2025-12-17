@@ -58,7 +58,7 @@
             this.Currency});
             this.TransactionsDataGridView.GridColor = System.Drawing.SystemColors.ActiveCaption;
             this.TransactionsDataGridView.Location = new System.Drawing.Point(149, 103);
-            this.TransactionsDataGridView.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.TransactionsDataGridView.Margin = new System.Windows.Forms.Padding(4);
             this.TransactionsDataGridView.Name = "TransactionsDataGridView";
             this.TransactionsDataGridView.ReadOnly = true;
             this.TransactionsDataGridView.RowHeadersWidth = 51;
@@ -107,8 +107,8 @@
             // 
             // CurrentBalanceTextBox
             // 
-            this.CurrentBalanceTextBox.Location = new System.Drawing.Point(599, 46);
-            this.CurrentBalanceTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.CurrentBalanceTextBox.Location = new System.Drawing.Point(854, 43);
+            this.CurrentBalanceTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.CurrentBalanceTextBox.Name = "CurrentBalanceTextBox";
             this.CurrentBalanceTextBox.ReadOnly = true;
             this.CurrentBalanceTextBox.Size = new System.Drawing.Size(132, 22);
@@ -117,7 +117,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(487, 49);
+            this.label1.Location = new System.Drawing.Point(742, 46);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(104, 16);
@@ -128,7 +128,7 @@
             // 
             this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.button1.Location = new System.Drawing.Point(745, 470);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(259, 28);
             this.button1.TabIndex = 3;
@@ -140,7 +140,7 @@
             // 
             this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.button2.Location = new System.Drawing.Point(51, 470);
-            this.button2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button2.Margin = new System.Windows.Forms.Padding(4);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(227, 28);
             this.button2.TabIndex = 4;
@@ -171,7 +171,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.CurrentBalanceTextBox);
             this.Controls.Add(this.TransactionsDataGridView);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "MainForm";
             this.Text = "MainForm";
             ((System.ComponentModel.ISupportInitialize)(this.TransactionsDataGridView)).EndInit();
