@@ -48,7 +48,7 @@
             this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.button2.Location = new System.Drawing.Point(136, 201);
-            this.button2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button2.Margin = new System.Windows.Forms.Padding(4);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(99, 28);
             this.button2.TabIndex = 11;
@@ -59,7 +59,7 @@
             // Password
             // 
             this.Password.Location = new System.Drawing.Point(136, 106);
-            this.Password.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Password.Margin = new System.Windows.Forms.Padding(4);
             this.Password.Name = "Password";
             this.Password.PasswordChar = '*';
             this.Password.Size = new System.Drawing.Size(132, 22);
@@ -77,7 +77,7 @@
             // Email
             // 
             this.Email.Location = new System.Drawing.Point(136, 80);
-            this.Email.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Email.Margin = new System.Windows.Forms.Padding(4);
             this.Email.Name = "Email";
             this.Email.Size = new System.Drawing.Size(132, 22);
             this.Email.TabIndex = 8;
@@ -94,7 +94,7 @@
             // Confirm_Pas
             // 
             this.Confirm_Pas.Location = new System.Drawing.Point(136, 132);
-            this.Confirm_Pas.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Confirm_Pas.Margin = new System.Windows.Forms.Padding(4);
             this.Confirm_Pas.Name = "Confirm_Pas";
             this.Confirm_Pas.PasswordChar = '*';
             this.Confirm_Pas.Size = new System.Drawing.Size(132, 22);
@@ -103,7 +103,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(41, 134);
+            this.label3.Location = new System.Drawing.Point(15, 135);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(117, 16);
             this.label3.TabIndex = 13;
@@ -112,9 +112,9 @@
             // NameTextBox
             // 
             this.NameTextBox.Location = new System.Drawing.Point(136, 54);
-            this.NameTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.NameTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.NameTextBox.Name = "NameTextBox";
-            this.NameTextBox.Size = new System.Drawing.Size(100, 20);
+            this.NameTextBox.Size = new System.Drawing.Size(132, 22);
             this.NameTextBox.TabIndex = 15;
             // 
             // label4
@@ -132,19 +132,19 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(124, 15);
+            this.label5.Location = new System.Drawing.Point(110, 15);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(108, 24);
+            this.label5.Size = new System.Drawing.Size(142, 29);
             this.label5.TabIndex = 16;
             this.label5.Text = "Registration";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(41, 164);
+            this.label6.Location = new System.Drawing.Point(26, 164);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(85, 13);
+            this.label6.Size = new System.Drawing.Size(104, 16);
             this.label6.TabIndex = 18;
             this.label6.Text = "Current balance:";
             // 
@@ -153,7 +153,7 @@
             this.BalanceNUD.DecimalPlaces = 2;
             this.BalanceNUD.Location = new System.Drawing.Point(136, 162);
             this.BalanceNUD.Name = "BalanceNUD";
-            this.BalanceNUD.Size = new System.Drawing.Size(100, 20);
+            this.BalanceNUD.Size = new System.Drawing.Size(100, 22);
             this.BalanceNUD.TabIndex = 19;
             // 
             // RegistrationForm
@@ -174,7 +174,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.Email);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "RegistrationForm";
             this.Text = "Registration";
             ((System.ComponentModel.ISupportInitialize)(this.BalanceNUD)).EndInit();

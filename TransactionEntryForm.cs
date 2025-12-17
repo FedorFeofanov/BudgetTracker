@@ -94,12 +94,15 @@ namespace BudgetTracker
 
         private void button2_Click(object sender, EventArgs e)// Return to main
         {
+
+        }
+
+        private void homeButton_Click(object sender, EventArgs e)
+        {
             MainForm Main = new MainForm(user: user);
             this.Hide();
             Main.ShowDialog();
             this.Close();
-
-
         }
     }
 }
