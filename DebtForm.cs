@@ -44,5 +44,36 @@ namespace BudgetTracker
             main.ShowDialog();
             this.Close();
         }
+
+        private void LoansDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)//Loans
+        {
+            if (LoansDataGridView.SelectedRows.Count == 1)
+            {
+                DataGridViewRow selectedRow = LoansDataGridView.SelectedRows[0];
+                var id = selectedRow.Cells[0].Value;
+               // DeleteObject(id);
+            }
+        }
+
+        private void button3_Click(object sender, EventArgs e)//Receivable
+        {
+            if(ReceivablesdataGridView.SelectedRows.Count == 1)
+            {
+            DataGridViewRow selectedRow = ReceivablesdataGridView.SelectedRows[0];
+            var id = selectedRow.Cells[0].Value;
+            //DeleteObject(id);
+            }
+        }
+
+        private void DebtForm_Load(object sender, EventArgs e)
+        {
+            ReceivablesdataGridView.MultiSelect = false;
+            LoansDataGridView.MultiSelect = false;
+        }
     }
 }
