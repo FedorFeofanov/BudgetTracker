@@ -31,9 +31,17 @@ namespace BudgetTracker
 
         private void button1_Click(object sender, EventArgs e)
         {
-            DebtEntryForm debtEntry = new DebtEntryForm(user: user);
+            DebtEntryForm debt = new DebtEntryForm(user: user);
             this.Hide();
-            debtEntry.ShowDialog();
+            debt.ShowDialog();
+            this.Close();
+        }
+
+        private void homeButton_Click(object sender, EventArgs e)
+        {
+            MainForm main = new MainForm(user: user);
+            this.Hide();
+            main.ShowDialog();
             this.Close();
         }
     }

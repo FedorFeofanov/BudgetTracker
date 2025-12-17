@@ -57,66 +57,80 @@
             this.Category,
             this.Currency});
             this.TransactionsDataGridView.GridColor = System.Drawing.SystemColors.ActiveCaption;
-            this.TransactionsDataGridView.Location = new System.Drawing.Point(112, 84);
+            this.TransactionsDataGridView.Location = new System.Drawing.Point(149, 103);
+            this.TransactionsDataGridView.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.TransactionsDataGridView.Name = "TransactionsDataGridView";
             this.TransactionsDataGridView.ReadOnly = true;
             this.TransactionsDataGridView.RowHeadersWidth = 51;
-            this.TransactionsDataGridView.Size = new System.Drawing.Size(553, 256);
+            this.TransactionsDataGridView.Size = new System.Drawing.Size(737, 315);
             this.TransactionsDataGridView.TabIndex = 0;
             // 
             // Amount
             // 
             this.Amount.HeaderText = "Amount";
+            this.Amount.MinimumWidth = 6;
             this.Amount.Name = "Amount";
             this.Amount.ReadOnly = true;
+            this.Amount.Width = 125;
             // 
             // Date
             // 
             this.Date.HeaderText = "Date";
+            this.Date.MinimumWidth = 6;
             this.Date.Name = "Date";
             this.Date.ReadOnly = true;
+            this.Date.Width = 125;
             // 
             // Description
             // 
             this.Description.HeaderText = "Description";
+            this.Description.MinimumWidth = 6;
             this.Description.Name = "Description";
             this.Description.ReadOnly = true;
+            this.Description.Width = 125;
             // 
             // Category
             // 
             this.Category.HeaderText = "Category";
+            this.Category.MinimumWidth = 6;
             this.Category.Name = "Category";
             this.Category.ReadOnly = true;
+            this.Category.Width = 125;
             // 
             // Currency
             // 
             this.Currency.HeaderText = "Currency";
+            this.Currency.MinimumWidth = 6;
             this.Currency.Name = "Currency";
             this.Currency.ReadOnly = true;
+            this.Currency.Width = 125;
             // 
             // CurrentBalanceTextBox
             // 
-            this.CurrentBalanceTextBox.Location = new System.Drawing.Point(449, 37);
+            this.CurrentBalanceTextBox.Location = new System.Drawing.Point(599, 46);
+            this.CurrentBalanceTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.CurrentBalanceTextBox.Name = "CurrentBalanceTextBox";
             this.CurrentBalanceTextBox.ReadOnly = true;
-            this.CurrentBalanceTextBox.Size = new System.Drawing.Size(100, 20);
+            this.CurrentBalanceTextBox.Size = new System.Drawing.Size(132, 22);
             this.CurrentBalanceTextBox.TabIndex = 1;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(365, 40);
+            this.label1.Location = new System.Drawing.Point(487, 49);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(85, 13);
+            this.label1.Size = new System.Drawing.Size(104, 16);
             this.label1.TabIndex = 2;
             this.label1.Text = "Current balance:";
             // 
             // button1
             // 
             this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.button1.Location = new System.Drawing.Point(559, 382);
+            this.button1.Location = new System.Drawing.Point(745, 470);
+            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(194, 23);
+            this.button1.Size = new System.Drawing.Size(259, 28);
             this.button1.TabIndex = 3;
             this.button1.Text = "Add a Transaction -->";
             this.button1.UseVisualStyleBackColor = true;
@@ -125,11 +139,12 @@
             // button2
             // 
             this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.button2.Location = new System.Drawing.Point(38, 382);
+            this.button2.Location = new System.Drawing.Point(51, 470);
+            this.button2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(170, 23);
+            this.button2.Size = new System.Drawing.Size(227, 28);
             this.button2.TabIndex = 4;
-            this.button2.Text = "Go to the Debt form -->";
+            this.button2.Text = "Go to the Debts -->";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
@@ -137,24 +152,26 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(108, 33);
+            this.label2.Location = new System.Drawing.Point(45, 36);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(117, 24);
+            this.label2.Size = new System.Drawing.Size(78, 29);
             this.label2.TabIndex = 5;
-            this.label2.Text = "Transactions";
+            this.label2.Text = "Home";
             // 
             // MainForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightBlue;
-            this.ClientSize = new System.Drawing.Size(793, 450);
+            this.ClientSize = new System.Drawing.Size(1057, 554);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.CurrentBalanceTextBox);
             this.Controls.Add(this.TransactionsDataGridView);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "MainForm";
             this.Text = "MainForm";
             ((System.ComponentModel.ISupportInitialize)(this.TransactionsDataGridView)).EndInit();
