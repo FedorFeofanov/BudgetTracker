@@ -63,6 +63,13 @@ namespace BudgetTracker
 
         }
 
+        private void backbutton_Click(object sender, EventArgs e)
+        {
+            DebtForm debt = new DebtForm(user: user);
+            this.Hide();
+            debt.ShowDialog();
+            this.Close();
+        }
         private void DebtEntryForm_Load(object sender, EventArgs e)
         {
 
