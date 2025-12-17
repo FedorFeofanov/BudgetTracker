@@ -26,5 +26,13 @@ namespace BudgetTracker
             debt.ShowDialog();
             this.Close();
         }
+
+        private void homeButton_Click(object sender, EventArgs e)
+        {
+            MainForm main = new MainForm(user: user);
+            this.Hide();
+            main.ShowDialog();
+            this.Close();
+        }
     }
 }

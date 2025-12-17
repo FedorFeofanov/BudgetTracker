@@ -31,6 +31,7 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.button1 = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
+            this.homeButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -71,12 +72,24 @@
             this.label4.TabIndex = 19;
             this.label4.Text = "Debts";
             // 
+            // homeButton
+            // 
+            this.homeButton.Location = new System.Drawing.Point(434, 383);
+            this.homeButton.Margin = new System.Windows.Forms.Padding(4);
+            this.homeButton.Name = "homeButton";
+            this.homeButton.Size = new System.Drawing.Size(125, 28);
+            this.homeButton.TabIndex = 20;
+            this.homeButton.Text = "Home";
+            this.homeButton.UseVisualStyleBackColor = true;
+            this.homeButton.Click += new System.EventHandler(this.homeButton_Click);
+            // 
             // DebtForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightBlue;
             this.ClientSize = new System.Drawing.Size(636, 486);
+            this.Controls.Add(this.homeButton);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.dataGridView1);
@@ -94,5 +107,6 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button homeButton;
     }
 }
