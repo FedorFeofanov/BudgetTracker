@@ -18,5 +18,10 @@ namespace BudgetTracker
             MinimumPayment = minimumPayment;
             PaymentFrequency = paymentFrequency;
         }
+        public double Pay(double amount)
+        {
+            this.CurrentBalance -= amount;
+            return this.CurrentBalance;
+        }
     }
 }
