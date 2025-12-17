@@ -30,6 +30,12 @@ namespace BudgetTracker
                 MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
+            if (DataBase.isEmailUsed(email))
+            {
+                MessageBox.Show("Email is already in use. Try again.", "Critical failure!",
+                MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
             string name = NameTextBox.Text;
             if (String.IsNullOrEmpty(name))
             {
