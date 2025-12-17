@@ -29,11 +29,6 @@
         private void InitializeComponent()
         {
             this.LoansDataGridView = new System.Windows.Forms.DataGridView();
-            this.button1 = new System.Windows.Forms.Button();
-            this.label4 = new System.Windows.Forms.Label();
-            this.homeButton = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            this.label1 = new System.Windows.Forms.Label();
             this.Lander = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.OriginalAmount = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.currentBalance = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -44,6 +39,10 @@
             this.dueDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.minimumPayment = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.paymentFrequency = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.button1 = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
+            this.homeButton = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.ReceivablesdataGridView = new System.Windows.Forms.DataGridView();
             this.borrowerName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -82,36 +81,6 @@
             this.LoansDataGridView.RowHeadersWidth = 51;
             this.LoansDataGridView.Size = new System.Drawing.Size(1046, 213);
             this.LoansDataGridView.TabIndex = 0;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(50, 582);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(205, 23);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "New loan/recievable";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(46, 28);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(61, 24);
-            this.label4.TabIndex = 19;
-            this.label4.Text = "Loans";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(46, 303);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(113, 24);
-            this.label1.TabIndex = 21;
-            this.label1.Text = "Receivables";
             // 
             // Lander
             // 
@@ -172,6 +141,47 @@
             this.paymentFrequency.HeaderText = "Payment Frequency";
             this.paymentFrequency.Name = "paymentFrequency";
             this.paymentFrequency.ReadOnly = true;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(50, 582);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(205, 23);
+            this.button1.TabIndex = 1;
+            this.button1.Text = "New loan/recievable";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(46, 28);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(61, 24);
+            this.label4.TabIndex = 19;
+            this.label4.Text = "Loans";
+            // 
+            // homeButton
+            // 
+            this.homeButton.Location = new System.Drawing.Point(360, 582);
+            this.homeButton.Margin = new System.Windows.Forms.Padding(4);
+            this.homeButton.Name = "homeButton";
+            this.homeButton.Size = new System.Drawing.Size(125, 28);
+            this.homeButton.TabIndex = 20;
+            this.homeButton.Text = "Home";
+            this.homeButton.UseVisualStyleBackColor = true;
+            this.homeButton.Click += new System.EventHandler(this.homeButton_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(46, 303);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(113, 24);
+            this.label1.TabIndex = 21;
+            this.label1.Text = "Receivables";
             // 
             // ReceivablesdataGridView
             // 
@@ -251,24 +261,13 @@
             this.repaymentCollected.Name = "repaymentCollected";
             this.repaymentCollected.ReadOnly = true;
             // 
-            // homeButton
-            // 
-            this.homeButton.Location = new System.Drawing.Point(434, 383);
-            this.homeButton.Margin = new System.Windows.Forms.Padding(4);
-            this.homeButton.Name = "homeButton";
-            this.homeButton.Size = new System.Drawing.Size(125, 28);
-            this.homeButton.TabIndex = 20;
-            this.homeButton.Text = "Home";
-            this.homeButton.UseVisualStyleBackColor = true;
-            this.homeButton.Click += new System.EventHandler(this.homeButton_Click);
-            // 
             // DebtForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightBlue;
-            this.Controls.Add(this.homeButton);
             this.ClientSize = new System.Drawing.Size(1148, 629);
+            this.Controls.Add(this.homeButton);
             this.Controls.Add(this.ReceivablesdataGridView);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label4);
