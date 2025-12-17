@@ -48,6 +48,8 @@ namespace BudgetTracker
             {
                 Taxable.Enabled = true;
                 receivableComboBox.Enabled = true;
+                Merch.Enabled = false;
+                loanComboBox.Enabled = false;
             }
         }
 
@@ -57,6 +59,8 @@ namespace BudgetTracker
             {
                 Merch.Enabled = true;
                 loanComboBox.Enabled = true;
+                Taxable.Enabled = false;
+                receivableComboBox.Enabled = false;
             }
         }
 
@@ -69,11 +73,14 @@ namespace BudgetTracker
                 DataBase.AddNewExpense(amount, dateTimePicker1.Value,
                   Description.Text,Category.Text,Currency.Text, user.Id, Merch.Text);
                 user.CurrentBalance -= amount;
-                foreach (Loan l in DataBase.Loans)
+                if (loanComboBox.SelectedIndex != -1)
                 {
-                    if (l.ID == int.Parse(loanComboBox.Text))
+                    foreach (Loan l in DataBase.Loans)
                     {
-                        l.Pay(amount);
+                        if (l.ID == int.Parse(loanComboBox.Text))
+                        {
+                            l.Pay(amount);
+                        }
                     }
                 }
                 DataBase.SaveAllData();
@@ -83,11 +90,14 @@ namespace BudgetTracker
                 DataBase.AddNewIncome(amount, dateTimePicker1.Value,
                   Description.Text, Category.Text, Currency.Text, user.Id, Taxable.Checked);
                 user.CurrentBalance += amount;
-                foreach (Receivable r in DataBase.Receivables)
+                if (receivableComboBox.SelectedIndex != -1)
                 {
-                    if (r.ID == int.Parse(receivableComboBox.Text))
+                    foreach (Receivable r in DataBase.Receivables)
                     {
-                        r.GetPaid(amount);
+                        if (r.ID == int.Parse(receivableComboBox.Text))
+                        {
+                            r.GetPaid(amount);
+                        }
                     }
                 }
                 DataBase.SaveAllData();
