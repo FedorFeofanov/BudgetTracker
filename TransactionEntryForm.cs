@@ -17,6 +17,18 @@ namespace BudgetTracker
         {
             InitializeComponent();
             this.user = user;
+            foreach (Loan loan in DataBase.Loans)
+            {
+                loanComboBox.Items.Add(loan.ID);
+            }
+            foreach (Receivable receivable in DataBase.Receivables)
+            {
+                receivableComboBox.Items.Add(receivable.ID);
+            }
+            Merch.Enabled = false;
+            Taxable.Enabled = false;
+            loanComboBox.Enabled = false;
+            receivableComboBox.Enabled = false;
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -27,13 +39,19 @@ namespace BudgetTracker
         private void radioButton1_CheckedChanged(object sender, EventArgs e)//income
         {
             if (IncomeRadioButton.Checked)
-                Merch.Enabled = false;
+            {
+                Taxable.Enabled = true;
+                receivableComboBox.Enabled = true;
+            }
         }
 
         private void radioButton2_CheckedChanged(object sender, EventArgs e)//expense
         {
-            if(!ExpenseRadioButton.Checked)
-                Taxable.Enabled = false;
+            if (ExpenseRadioButton.Checked)
+            {
+                Merch.Enabled = true;
+                loanComboBox.Enabled = true;
+            }
         }
 
 
@@ -45,6 +63,13 @@ namespace BudgetTracker
                 DataBase.AddNewExpense(amount, dateTimePicker1.Value,
                   Description.Text,Category.Text,Currency.Text, user.Id, Merch.Text);
                 user.CurrentBalance -= amount;
+                foreach (Loan l in DataBase.Loans)
+                {
+                    if (l.ID == int.Parse(loanComboBox.Text))
+                    {
+                        l.Pay(amount);
+                    }
+                }
                 DataBase.SaveAllData();
             }
             else if(IncomeRadioButton.Checked)
@@ -52,6 +77,13 @@ namespace BudgetTracker
                 DataBase.AddNewIncome(amount, dateTimePicker1.Value,
                   Description.Text, Category.Text, Currency.Text, user.Id, Taxable.Checked);
                 user.CurrentBalance += amount;
+                foreach (Receivable r in DataBase.Receivables)
+                {
+                    if (r.ID == int.Parse(receivableComboBox.Text))
+                    {
+                        r.GetPaid(amount);
+                    }
+                }
                 DataBase.SaveAllData();
             }
             MainForm main = new MainForm(user: user);
