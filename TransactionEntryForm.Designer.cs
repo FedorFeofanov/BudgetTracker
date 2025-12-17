@@ -46,6 +46,10 @@
             this.label8 = new System.Windows.Forms.Label();
             this.Taxable = new System.Windows.Forms.CheckBox();
             this.button2 = new System.Windows.Forms.Button();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.receivableComboBox = new System.Windows.Forms.ComboBox();
+            this.loanComboBox = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // IncomeRadioButton
@@ -193,7 +197,7 @@
             // 
             this.Taxable.AutoSize = true;
             this.Taxable.Location = new System.Drawing.Point(151, 76);
-            this.Taxable.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Taxable.Margin = new System.Windows.Forms.Padding(2);
             this.Taxable.Name = "Taxable";
             this.Taxable.Size = new System.Drawing.Size(64, 17);
             this.Taxable.TabIndex = 17;
@@ -212,12 +216,50 @@
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(413, 287);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(109, 13);
+            this.label7.TabIndex = 20;
+            this.label7.Text = "Receivable(Optional):";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(443, 314);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(79, 13);
+            this.label9.TabIndex = 21;
+            this.label9.Text = "Loan(Optional):";
+            // 
+            // receivableComboBox
+            // 
+            this.receivableComboBox.FormattingEnabled = true;
+            this.receivableComboBox.Location = new System.Drawing.Point(528, 284);
+            this.receivableComboBox.Name = "receivableComboBox";
+            this.receivableComboBox.Size = new System.Drawing.Size(121, 21);
+            this.receivableComboBox.TabIndex = 22;
+            // 
+            // loanComboBox
+            // 
+            this.loanComboBox.FormattingEnabled = true;
+            this.loanComboBox.Location = new System.Drawing.Point(528, 311);
+            this.loanComboBox.Name = "loanComboBox";
+            this.loanComboBox.Size = new System.Drawing.Size(121, 21);
+            this.loanComboBox.TabIndex = 23;
+            // 
             // TransactionEntryForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightBlue;
             this.ClientSize = new System.Drawing.Size(776, 399);
+            this.Controls.Add(this.loanComboBox);
+            this.Controls.Add(this.receivableComboBox);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.label7);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.Taxable);
             this.Controls.Add(this.label6);
@@ -262,5 +304,9 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.CheckBox Taxable;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.ComboBox receivableComboBox;
+        private System.Windows.Forms.ComboBox loanComboBox;
     }
 }

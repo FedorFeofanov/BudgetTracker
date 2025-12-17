@@ -18,5 +18,10 @@ namespace BudgetTracker
             ExpectedRepaymentDate = expectedRepaymentDate;
             RepaymentCollected = repaymentCollected;
         }
+        public double GetPaid(double amount)
+        {
+            this.RepaymentCollected += amount;
+            return this.RepaymentCollected;
+        }
     }
 }
