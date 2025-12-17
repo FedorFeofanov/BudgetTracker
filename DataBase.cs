@@ -116,7 +116,7 @@ namespace BudgetTracker
             }
             return maxId + 1;
         }
-        public static Loan AddNewLoan(string landerName, double originalAmount, double currentBalance, double interestRate, DateTime startDate, string debtType, string status, int UserID, DateTime dueDate, double minimumPayment, int termInMonths, string paymentFrequency)
+        public static Loan AddNewLoan(string landerName, double originalAmount, double currentBalance, double interestRate, DateTime startDate, string debtType, string status, int UserID, DateTime dueDate, double minimumPayment, double paymentFrequency)
         {
             int iD = GetNextIdLoan();
             Loan loan = new Loan(iD, landerName, originalAmount, currentBalance, interestRate, startDate, debtType, status, UserID, dueDate, minimumPayment, paymentFrequency);
@@ -141,10 +141,10 @@ namespace BudgetTracker
             }
             return maxId + 1;
         }
-        public static Receivable AddNewReceivable(string landerName, double originalAmount, double currentBalance, double interestRate, DateTime startDate, string debtType, string status, int UserID, string borrowerName, DateTime expectedRepaymentDate, bool isInterenstAccruing, double repaymentCollected)
+        public static Receivable AddNewReceivable(string landerName, double originalAmount, double currentBalance, double interestRate, DateTime startDate, string debtType, string status, int UserID, string borrowerName, DateTime expectedRepaymentDate, double repaymentCollected)
         {
             int iD = GetNextIdReceivable();
-            Receivable recievable = new Receivable(iD, landerName, originalAmount, currentBalance, interestRate, startDate, debtType, status, UserID, borrowerName, expectedRepaymentDate, isInterenstAccruing, repaymentCollected);
+            Receivable recievable = new Receivable(iD, landerName, originalAmount, currentBalance, interestRate, startDate, debtType, status, UserID, borrowerName, expectedRepaymentDate, repaymentCollected);
             Receivables.Add(recievable);
             SaveAllData();
             return recievable;
