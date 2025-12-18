@@ -83,21 +83,33 @@ namespace BudgetTracker
             }
             return maxId + 1;
         }
-        public static User AddNewUser(string name, string email, string password, double currentBalance)
+        public static bool isEmailUsed(string email)
         {
-
             foreach (User u in Users)
             {
                 if (u.Email == email)
                 {
-                    return null;
+                    return true;
                 }
             }
-
+            return false;
+        }
+        public static User AddNewUser(string name, string email, string password, double currentBalance)
+        {
             User user = new User(id: GetNextIdUser(), name: name, email: email, password: password, currentBalance: currentBalance);
             Users.Add(user);
             SaveAllData();
             return user;
+        }
+        public static int DeleteUser(int ID)
+        {
+            int removedCount = Users.RemoveAll(u => u.Id == ID);
+            if (removedCount > 0)
+            {
+                SaveAllData();
+                return 0; // Success
+            }
+            return 1; // Not found
         }
         public static int GetNextIdLoan()
         {
@@ -124,6 +136,16 @@ namespace BudgetTracker
             SaveAllData();
             return loan;
         }
+        public static int DeleteLoan(int ID)
+        {
+            int removedCount = Loans.RemoveAll(l => l.ID == ID);
+            if (removedCount > 0)
+            {
+                SaveAllData();
+                return 0; // Success
+            }
+            return 1; // Not found
+        }
         public static int GetNextIdReceivable()
         {
             if (Receivables == null || Receivables.Count == 0)
@@ -148,6 +170,16 @@ namespace BudgetTracker
             Receivables.Add(recievable);
             SaveAllData();
             return recievable;
+        }
+        public static int DeleteReceivable(int ID)
+        {
+            int removedCount = Receivables.RemoveAll(r => r.ID == ID);
+            if (removedCount > 0)
+            {
+                SaveAllData();
+                return 0; // Success
+            }
+            return 1; // Not found
         }
         public static int GetNextIdIncome()
         {
@@ -174,6 +206,16 @@ namespace BudgetTracker
             SaveAllData();
             return income;
         }
+        public static int DeleteIncome(int ID)
+        {
+            int removedCount = Incomes.RemoveAll(i => i.ID == ID);
+            if (removedCount > 0)
+            {
+                SaveAllData();
+                return 0; // Success
+            }
+            return 1; // Not found
+        }
         public static int GetNextIdExpense()
         {
             if (Expenses == null || Expenses.Count == 0)
@@ -198,6 +240,37 @@ namespace BudgetTracker
             Expenses.Add(expense);
             SaveAllData();
             return expense;
+        }
+        public static void DeleteLoan(int id)
+        {
+            var loan = Loans.FirstOrDefault(l => l.ID == id);
+            if (loan != null)
+            {
+                Loans.Remove(loan);
+                SaveAllData();
+            }
+        }
+
+        public static void DeleteReceivable(int id)
+        {
+            var rec = Receivables.FirstOrDefault(r => r.ID == id);
+            if (rec != null)
+            {
+                Receivables.Remove(rec);
+                SaveAllData();
+            }
+        }
+
+
+        public static int DeleteExpense(int ID)
+        {
+            int removedCount = Expenses.RemoveAll(e => e.ID == ID);
+            if (removedCount > 0)
+            {
+                SaveAllData();
+                return 0; // Success
+            }
+            return 1; // Not found
         }
     }
 }
