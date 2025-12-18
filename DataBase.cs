@@ -101,6 +101,13 @@ namespace BudgetTracker
             SaveAllData();
             return user;
         }
+        public static User UpdateUser(int id, string name, string email, string password, double currentBalance)
+        {
+            User user = Users.First(u => u.Id == id);
+            user.Name = name; user.Email = email; user.Password = password; user.CurrentBalance = currentBalance;
+            SaveAllData();
+            return user;
+        }
         public static int DeleteUser(int ID)
         {
             int removedCount = Users.RemoveAll(u => u.Id == ID);
@@ -146,6 +153,28 @@ namespace BudgetTracker
             }
             return 1; // Not found
         }
+        public static Loan UpdateLoan(int id, string landerName, double originalAmount, double currentBalance, double interestRate, DateTime startDate, string debtType, string status, int userID, DateTime dueDate, double minimumPayment, double paymentFrequency)
+        {
+            Loan loan = Loans.FirstOrDefault(l => l.ID == id);
+
+            if (loan != null)
+            {
+                loan.LanderName = landerName;
+                loan.OriginalAmount = originalAmount;
+                loan.CurrentBalance = currentBalance;
+                loan.InterestRate = interestRate;
+                loan.StartDate = startDate;
+                loan.DebtType = debtType;
+                loan.Status = status;
+                loan.UserID = userID;
+                loan.DueDate = dueDate;
+                loan.MinimumPayment = minimumPayment;
+                loan.PaymentFrequency = paymentFrequency;
+                SaveAllData();
+            }
+
+            return loan;
+        }
         public static int GetNextIdReceivable()
         {
             if (Receivables == null || Receivables.Count == 0)
@@ -180,6 +209,28 @@ namespace BudgetTracker
                 return 0; // Success
             }
             return 1; // Not found
+        }
+        public static Receivable UpdateReceivable(int id, string landerName, double originalAmount, double currentBalance, double interestRate, DateTime startDate, string debtType, string status, int userID, string borrowerName, DateTime expectedRepaymentDate, double repaymentCollected)
+        {
+            Receivable receivable = Receivables.FirstOrDefault(r => r.ID == id);
+
+            if (receivable != null)
+            {
+                receivable.LanderName = landerName;
+                receivable.OriginalAmount = originalAmount;
+                receivable.CurrentBalance = currentBalance;
+                receivable.InterestRate = interestRate;
+                receivable.StartDate = startDate;
+                receivable.DebtType = debtType;
+                receivable.Status = status;
+                receivable.UserID = userID;
+                receivable.BorrowerName = borrowerName;
+                receivable.ExpectedRepaymentDate = expectedRepaymentDate;
+                receivable.RepaymentCollected = repaymentCollected;
+                SaveAllData();
+            }
+
+            return receivable;
         }
         public static int GetNextIdIncome()
         {
@@ -216,6 +267,24 @@ namespace BudgetTracker
             }
             return 1; // Not found
         }
+        public static Income UpdateIncome(int id, double amount, DateTime date, string description, string category, string currency, int userID, bool taxable)
+        {
+            Income income = Incomes.FirstOrDefault(i => i.ID == id);
+
+            if (income != null)
+            {
+                income.Amount = amount;
+                income.Date = date;
+                income.Description = description;
+                income.Category = category;
+                income.Currency = currency;
+                income.UserID = userID;
+                income.Taxable = taxable;
+                SaveAllData();
+            }
+
+            return income;
+        }
         public static int GetNextIdExpense()
         {
             if (Expenses == null || Expenses.Count == 0)
@@ -241,27 +310,6 @@ namespace BudgetTracker
             SaveAllData();
             return expense;
         }
-        public static void DeleteLoan(int id)
-        {
-            var loan = Loans.FirstOrDefault(l => l.ID == id);
-            if (loan != null)
-            {
-                Loans.Remove(loan);
-                SaveAllData();
-            }
-        }
-
-        public static void DeleteReceivable(int id)
-        {
-            var rec = Receivables.FirstOrDefault(r => r.ID == id);
-            if (rec != null)
-            {
-                Receivables.Remove(rec);
-                SaveAllData();
-            }
-        }
-
-
         public static int DeleteExpense(int ID)
         {
             int removedCount = Expenses.RemoveAll(e => e.ID == ID);
@@ -271,6 +319,24 @@ namespace BudgetTracker
                 return 0; // Success
             }
             return 1; // Not found
+        }
+        public static Expense UpdateExpense(int id, double amount, DateTime date, string description, string category, string currency, int userID, string merchantName)
+        {
+            Expense expense = Expenses.FirstOrDefault(e => e.ID == id);
+
+            if (expense != null)
+            {
+                expense.Amount = amount;
+                expense.Date = date;
+                expense.Description = description;
+                expense.Category = category;
+                expense.Currency = currency;
+                expense.UserID = userID;
+                expense.MerchantName = merchantName;
+                SaveAllData();
+            }
+
+            return expense;
         }
     }
 }
