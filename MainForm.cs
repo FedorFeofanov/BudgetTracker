@@ -21,11 +21,17 @@ namespace BudgetTracker
             CurrentBalanceTextBox.Text = user.CurrentBalance.ToString();
             foreach(Income i in DataBase.Incomes)
             {
-                TransactionsDataGridView.Rows.Add(i.Amount, i.Date, i.Description, i.Category, i.Currency);
+                if (i.UserID == user.Id)
+                {
+                    TransactionsDataGridView.Rows.Add(i.Amount, i.Date, i.Description, i.Category, i.Currency);
+                }
             }
             foreach(Expense e in DataBase.Expenses)
             {
-                TransactionsDataGridView.Rows.Add(-e.Amount, e.Date, e.Description, e.Category, e.Currency);
+                if (e.UserID == user.Id)
+                {
+                    TransactionsDataGridView.Rows.Add(-e.Amount, e.Date, e.Description, e.Category, e.Currency);
+                }
             }
         }
 
