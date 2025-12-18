@@ -24,7 +24,7 @@ namespace BudgetTracker
             }
             foreach(Receivable receivable in DataBase.Receivables)
             {
-                LoansDataGridView.Rows.Add(receivable.ID,receivable.BorrowerName, receivable.OriginalAmount, receivable.CurrentBalance, receivable.InterestRate, receivable.StartDate, 
+                ReceivablesdataGridView.Rows.Add(receivable.ID,receivable.BorrowerName, receivable.OriginalAmount, receivable.CurrentBalance, receivable.InterestRate, receivable.StartDate, 
                     receivable.DebtType, receivable.Status, receivable.ExpectedRepaymentDate, receivable.RepaymentCollected);
             }
         }
@@ -43,7 +43,7 @@ namespace BudgetTracker
 
             foreach (Receivable receivable in DataBase.Receivables)
             {
-                LoansDataGridView.Rows.Add(receivable.ID, receivable.BorrowerName, receivable.OriginalAmount, receivable.CurrentBalance, receivable.InterestRate, receivable.StartDate,
+                ReceivablesdataGridView.Rows.Add(receivable.ID, receivable.BorrowerName, receivable.OriginalAmount, receivable.CurrentBalance, receivable.InterestRate, receivable.StartDate,
                     receivable.DebtType, receivable.Status, receivable.ExpectedRepaymentDate, receivable.RepaymentCollected);
             }
         }
@@ -83,7 +83,7 @@ namespace BudgetTracker
         {
             if(ReceivablesdataGridView.SelectedRows.Count == 1)
             {
-                int id = Convert.ToInt32(LoansDataGridView.SelectedRows[0].Cells[0].Value);
+                int id = Convert.ToInt32(ReceivablesdataGridView.SelectedRows[0].Cells[0].Value);
                 DataBase.DeleteReceivable(id);
                 RefreshGrids();
             }
