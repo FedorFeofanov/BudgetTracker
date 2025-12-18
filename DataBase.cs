@@ -199,5 +199,26 @@ namespace BudgetTracker
             SaveAllData();
             return expense;
         }
+        public static void DeleteLoan(int id)
+        {
+            var loan = Loans.FirstOrDefault(l => l.ID == id);
+            if (loan != null)
+            {
+                Loans.Remove(loan);
+                SaveAllData();
+            }
+        }
+
+        public static void DeleteReceivable(int id)
+        {
+            var rec = Receivables.FirstOrDefault(r => r.ID == id);
+            if (rec != null)
+            {
+                Receivables.Remove(rec);
+                SaveAllData();
+            }
+        }
+
+
     }
 }
